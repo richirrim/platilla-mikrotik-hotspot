@@ -1,0 +1,33 @@
+block config
+  include variables
+
+doctype html
+html(lang="es")
+  head
+    title= `${siteName} | Login Hotspot`
+    meta(charset="utf-8")
+    meta(name="viewport" content="initial-scale=1.0, width=device-width")
+    meta(name="description" content=pageDescription)
+    block styles
+      link(rel="stylesheet" href="/css/style.css")
+      link(rel="shortcut icon" href="/public/images/favicon.png")
+    
+  body
+    // ----------- main header -----------  
+    header
+      block header
+        image(src="/images/logox.png" alt="")
+        nav
+          include ../includes/menu
+    
+    // ----------- main -----------  
+    main
+        block main
+    
+    // ----------- main footer -----------  
+    footer
+        block footer
+    
+    block scripts
+      script(src="/js/script.js")
+      script(src="https://polyfill.io/v3/polyfill.min.js?features=default")
