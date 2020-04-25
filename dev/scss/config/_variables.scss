@@ -1,0 +1,52 @@
+/* color palet */
+:roo {
+  --color-primary: #FF9800;
+  --color-second: #EF6C00;
+  --color-accent: #2962FF;
+  --color-text: #263238;
+  --color-text2: #1D272C;
+  --color-bg: #FFF3E0;
+  --color-white: #FAFAFA;
+}
+
+$color-primary: #FF9800;
+$color-second: #EF6C00;
+$color-accent: #2962FF;
+$color-text: #263238;
+$color-text2: #1D272C;
+$color-bg: #FFF3E0;
+$color-white: #FAFAFA;
+
+
+/* typography */
+:root {
+  --font-title: Montserrat, arial;
+  --font-content: roboto, arial;
+  --h1-font-size: 1.953em;
+  --h2-font-size: 1.563em;
+  --h3-font-size: 1.25em;
+  --body-font-size: 1em;
+  --smaller-font-size: .8em;
+  --small-font-size: .64em;
+  // --h1-font-size: 2.441em;
+  // --h2-font-size: 1.953em;
+  // --h3-font-size: 1.563em;
+  // --body-font-size: 1.25em;
+  // --smaller-font-size: .1em;
+  // --small-font-size: .8em;
+}
+
+/* Variables de apilamiento */
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+$breakPoints: (
+  small: 20em, // 320px
+  medium: 48em, // 768px
+  large: 75em // 1200px
+);
