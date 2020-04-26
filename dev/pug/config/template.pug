@@ -17,18 +17,20 @@ html(lang="es")
     
   body
     // ----------- main header -----------  
-    header
+    header.main-header
       block header
-        image(src="/images/logox.png" alt="")
+        div.main-header__block
+          image(src="/images/logox.png" alt="")
+          div(class="main-menu-icon" id="js-menu-icon")
         nav
           include ../includes/menu
     
     // ----------- main -----------  
-    main
+    main.main
         block main
     
     // ----------- main footer -----------  
-    footer
+    footer.main-footer
         block footer
     
     block scripts
