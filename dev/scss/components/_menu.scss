@@ -1,0 +1,35 @@
+.main-nav {
+  position: absolute;
+  top: $header-height;
+  left: -90%;
+  bottom: 0;
+  background-color: var(--color-text2);
+  width: 90vw;
+  transition: left .3s;
+
+  &.show { left: 0; }
+}
+
+.menu {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  padding-top: $header-height;
+  
+  &__item { list-style-type: none; }
+  &__link {
+    display: block;
+    padding-left: 2em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    color: var(--color-primary);
+    text-transform: uppercase;
+    transition: all .3s;
+
+    &:hover {
+      color: var(--color-accent);
+      background-color: var(--color-text);
+      text-decoration: underline;
+    }
+  }
+}

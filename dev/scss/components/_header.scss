@@ -1,0 +1,34 @@
+%cursor-pointer {
+  cursor: pointer;
+}
+.main-header {
+  padding-left: 1em;
+  padding-right: 1em;
+  background-color: var(--color-primary);
+  height: $header-height;
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo {
+    width: 4em;
+    @extend %cursor-pointer;
+  }
+  .main-menu-icon {
+    width: $header-height /  2 + .5;
+    height: $header-height / 2;
+    background-image: linear-gradient(
+      $color-text 20%, 
+      transparent 20%, transparent 40%, 
+      $color-text 40%, $color-text 60%, 
+      transparent 60%, transparent 80%, 
+      $color-text 80%
+    );
+    transition: all .3s;
+    @extend %cursor-pointer;
+    &:active { transform: scale(.90);}
+  }
+}
+

@@ -1,7 +1,15 @@
-const msj = () => { console.log('js next 4') } 
-const mensaje = () => { console.log('js next 8') } 
-const mensaje2 = () => { console.log('js next 10') } 
+const toggleMenu = function (idIconMenu, idNav) {
+  const toggelEl = document.getElementById(idIconMenu)
+  const menuEl = document.getElementById(idNav)
+  
+  if (!(toggleMenu && menuEl)) {
+    console.warn('Alguno de los elementos no existen ⚠')
+    return
+  }
+  
+  toggelEl.addEventListener('click', () => {
+    menuEl.classList.toggle('show')
+  })
+}
 
-
-
-if (true) console.log(true)
+toggleMenu('js-menu-icon', 'js-nav')
