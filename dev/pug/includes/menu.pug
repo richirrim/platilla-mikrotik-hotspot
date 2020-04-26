@@ -1,4 +1,8 @@
-ul.menu
-    li: a(href="#") Inicio
-    li: a(href="#") Nosotros
-    li: a(href="#") Contacto
+ul.menu()
+  each page in pages
+    li.menu__item
+      a.menu__link(href=page.url)= page.title
+        if page.child.length > 0 
+          ul
+            each page2 in page.child
+              li: a(href=page2.url)= page2.title
