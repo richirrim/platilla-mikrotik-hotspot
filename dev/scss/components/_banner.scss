@@ -1,0 +1,30 @@
+%text-white {
+  color: var(--color-white);
+}
+.main-banner {
+  position: relative;
+  padding: 2em 1em;
+  background-color: var(--color-primary);
+  border-radius: 1em;
+  overflow: hidden;
+  
+  &__hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0; 
+    height: 100%;
+    opacity: .08;
+    object-fit: cover;
+    object-position: center;
+  }
+  .content-text {
+    text-align: center;
+
+    @extend %text-white;
+  }
+  &__title {}
+  &__description {
+    margin-bottom: 0;
+  }
+}
