@@ -1,0 +1,12 @@
+mixin form(title, UserPlaceholderText, PassPlaceholderText, buttonText)
+  .form
+    span(class="form__title")= title.toUpperCase()
+    form
+      div.form__input
+        div.form__icon
+        input(class="input" type="text" placeholder=UserPlaceholderText required)
+      div.form__input
+        div.form__icon
+        input(class="input" type="text" placeholder=PassPlaceholderText required)
+      input(class="button-primary" type="submit", value=buttonText)
+

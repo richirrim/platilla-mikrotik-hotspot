@@ -1,0 +1,42 @@
+.form {
+  border-radius: .5em;
+  background-color: var(--color-text);
+  padding: 2em;
+
+
+  form > *:first-child { margin-bottom: 1em; }
+  form > *:nth-child(2) { margin-bottom: 1.5em; }
+  &__title {
+    display: block;
+    margin-bottom: 4.5em;
+    color: #fff;
+    font-size: var(--h2-font-size);
+    font-family: var(--font-title);
+    text-align: center;
+    letter-spacing: var(--letter-spacing);
+  }
+  &__icon {
+    display: inline;
+    padding: 1em 1.5em;
+    background-color: var(--color-text2);
+  }
+  &__input {
+    border-radius: .5em;
+    padding-right: 1em;
+    background-color: var(--color-bg);
+    overflow: hidden;
+
+    input.input { 
+      border: none;
+      background: transparent;
+      padding-left: 1em;
+      caret-color: var(--color-second);
+      color: var(--color-primary);
+      width: 100%; 
+      &::placeholder { 
+        color: var(--color-text); 
+        opacity: .4;
+      }
+    }
+  }
+}
