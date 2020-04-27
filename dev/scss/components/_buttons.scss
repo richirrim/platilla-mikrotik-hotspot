@@ -22,17 +22,13 @@
 	background-color: transparent;
 	transition: all .3s;
 }
-%box-shadow-btn {
-  box-shadow: rgba(#f50057, .2) 0 2px 4px;
-}
 
-
-.button { @extend %box-shadow-btn; }
+.button { box-shadow: rgba(#455a64, .2) 0 2px 4px; }
 .button-primary {
 	color: #eceff1;
 	background-color: var(--color-accent);
 	transition: all .3s;
-	@extend %box-shadow-btn;
+	box-shadow: rgba($color-accent, .2) 0 2px 4px;;
 	
 	&:hover { background-color: darken($color-accent, 4%) }
 }
