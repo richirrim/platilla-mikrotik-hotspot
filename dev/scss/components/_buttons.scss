@@ -1,0 +1,53 @@
+[class^="button"] {
+	outline: none;
+	border: none;
+	border-radius: .5em;
+	padding: 1em;
+	color: #455a64;
+	background-color: #cfd8dc;
+	text-transform: uppercase;
+	letter-spacing: 2px; // pendiente de cambiar
+	cursor: pointer;
+	width: 100%;
+	transition: all .3s;
+	&:hover { background-color: darken(#cfd8dc, 4%); }
+	&:active { transform: scale(.96); }
+	&:focus { box-shadow: 0 0 0 1px var(--color-accent); }
+}
+
+
+
+%repeat-style {
+	color: var(--color-second);
+	background-color: transparent;
+	transition: all .3s;
+}
+%box-shadow-btn {
+  box-shadow: rgba(#f50057, .2) 0 2px 4px;
+}
+
+
+.button { @extend %box-shadow-btn; }
+.button-primary {
+	color: #eceff1;
+	background-color: var(--color-accent);
+	transition: all .3s;
+	@extend %box-shadow-btn;
+	
+	&:hover { background-color: darken($color-accent, 4%) }
+}
+
+.button-secondary {
+	border: 1px solid;
+	@extend %repeat-style;
+	
+	&:hover { background-color: rgba($color-second, .2); }
+}
+.button-text {
+	@extend %repeat-style;
+	
+	&:hover {
+		background-color: rgba($color-second, .2);	
+		text-decoration: underline;
+	}
+}
