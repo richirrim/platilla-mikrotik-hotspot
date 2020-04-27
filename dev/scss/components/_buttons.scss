@@ -6,7 +6,7 @@
 	color: #455a64;
 	background-color: #cfd8dc;
 	text-transform: uppercase;
-	letter-spacing: 2px; // pendiente de cambiar
+	letter-spacing: var(--letter-spacing); // pendiente de cambiar
 	cursor: pointer;
 	width: 100%;
 	transition: all .3s;
