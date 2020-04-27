@@ -7,7 +7,7 @@
   background-color: var(--color-primary);
   border-radius: 1em;
   overflow: hidden;
-  
+  .container { position: relative; }
   &__hero-image {
     position: absolute;
     top: 0;
