@@ -3,10 +3,10 @@ mixin form(title, UserPlaceholderText, PassPlaceholderText, buttonText)
     span(class="form__title")= title.toUpperCase()
     form(method="POST")
       div.form__input
-        div.form__icon
+        div.form__icon.icon-user
         input(class="input" id="js-inputName" type="text" placeholder=UserPlaceholderText name="userName" required)
       div.form__input
-        div.form__icon
+        div.form__icon.icon-pass
         input(class="input" id="js-inputPass" type="text" placeholder=PassPlaceholderText name="password" required)
       input(class="button-primary" type="submit", value=buttonText)
 
