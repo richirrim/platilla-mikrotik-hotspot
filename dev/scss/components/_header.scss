@@ -2,10 +2,13 @@
   cursor: pointer;
 }
 .main-header {
+  position: fixed;
   padding-left: 1em;
   padding-right: 1em;
   background-color: var(--color-primary);
+  width: 100%;
   height: $header-height;
+  z-index: var(--z-tooltip);
 
   &__block {
     display: flex;
