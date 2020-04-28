@@ -8,6 +8,7 @@
   background-color: var(--color-primary);
   width: 100%;
   height: $header-height;
+  box-shadow: $shadow;
   z-index: var(--z-tooltip);
 
   &__block {
