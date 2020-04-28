@@ -15,10 +15,6 @@
     text-align: center;
     letter-spacing: var(--letter-spacing);
   }
-  &__icon {
-    padding: 1em 1.5em;
-    background-color: var(--color-text2);
-  }
   &__input {
     display: flex;
     border-radius: .5em;
@@ -26,7 +22,11 @@
     background-color: var(--color-bg);
     overflow: hidden;
 
-    .input { 
+    div.icon {
+      padding: 1em 1.5em;
+      background-color: var(--color-text2);
+    }
+    input { 
       border: none;
       background: transparent;
       padding-left: 1em;
