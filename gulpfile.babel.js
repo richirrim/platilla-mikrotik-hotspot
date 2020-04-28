@@ -5,6 +5,7 @@ import minify from 'gulp-minify'
 import babel from 'gulp-babel'
 import plumber from 'gulp-plumber'
 import imagemin from 'gulp-imagemin'
+import autoprefixer from 'gulp-autoprefixer'
 import browserSync from 'browser-sync'
 
 const server = browserSync.create()
@@ -63,6 +64,7 @@ function sassToCss () {
       outputStyle: 'expanded'
     }))
       .on('error', sass.logError)
+    .pipe(autoprefixer({ cascade: false }))
     .pipe(dest(paths.styles.dest))
 }
 
