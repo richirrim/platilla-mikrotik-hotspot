@@ -1,7 +1,7 @@
 block config
   include variables
-  include ../includes/banner-mixin
-  include ../includes/form-mixin
+  include /includes/banner-mixin
+  include /includes/form-mixin
 
 doctype html
 html(lang="es")
@@ -25,7 +25,7 @@ html(lang="es")
           img.logo(src="/images/logo-white.png" alt="Logo de la página")
           div(class="main-menu-icon" id="js-menu-icon")
         nav(class="main-nav" id="js-nav")
-          include ../includes/menu
+          include /includes/menu
     
     // ----------- main -----------  
     main.main
