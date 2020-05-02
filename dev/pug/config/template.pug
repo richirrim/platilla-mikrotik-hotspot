@@ -18,15 +18,7 @@ html(lang="es")
       <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     
   body
-    // ----------- main header -----------  
-    header.main-header
-      block header
-        div.main-header__block
-          img.logo(src="/images/logo-white.png" alt="Logo de la página")
-          div(class="main-menu-icon" id="js-menu-icon")
-        // ------------ main nav ------------------- 
-        nav(class="main-nav" id="js-nav")
-          include /includes/menu
+    include /includes/main-header
     
     // ----------- main -----------  
     main.main
