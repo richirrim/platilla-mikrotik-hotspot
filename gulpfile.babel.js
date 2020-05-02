@@ -12,7 +12,8 @@ const server = browserSync.create()
 sass.compiler = require('node-sass')
 
 const paths = {
-  root: './public',
+  rootServer: './public',
+  rootPug: './dev/pug',
   html: {
     src: './dev/pug/pages/**/*.pug',
     dest: './public/'
@@ -26,7 +27,7 @@ const paths = {
     dest: './public/js/'
   },
   images: {
-    src: './dev/images/**/*',
+    src: './dev/images/**/**',
     dest: './public/images/'
   }
 };
@@ -49,9 +50,9 @@ function pugToHtml () {
     .pipe(plumber())
     .pipe(pug({
       pretty: true,
-        /* Agregar el "basedir" permite trabajar con rutas abosolutas o 
-        relativas dentro de archivos "".pug". */
-        basedir: './dev/pug'
+        /* Agregar el "basedir" permite trabajar con rutas 
+        relativas al servidor o raiz*/
+        basedir: paths.rootPug
     }))
     .pipe(dest(paths.html.dest))
 }
@@ -82,7 +83,7 @@ function optimizeImg () {
 function startServer () {
   server.init({
     server: { 
-      baseDir: paths.root 
+      baseDir: paths.rootServer 
     }
   })
 }
@@ -91,8 +92,10 @@ function watchFiles () {
   watch(paths.html.src, pugToHtml)
   watch(paths.styles.src, sassToCss)
   watch(paths.scripts.src, babelJs)
+  watch(paths.images.src, optimizeImg)
+  
   watch(paths.html.dest).on('change', server.reload)
-  watch(paths.styles.dest).on('change', server.reload)
+  watch(paths.scripts.dest).on('change', server.reload)
 }
 
 exports.default = parallel(startServer, optimizeImg, series(sassToCss, pugToHtml, babelJs, watchFiles))
