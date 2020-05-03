@@ -48,6 +48,17 @@ $color-white: #FAFAFA;
   --z-modal: 1000;
 }
 
+// Colores para socials (contacto)
+:root {
+  --color-facebook: #1976d2;
+  --color-whatsapp: #4CAF50;
+  --color-gmail: #F44336;
+}
+
+$color-facebook: #1976d2;
+$color-whatsapp: #4CAF50;
+$color-gmail: #F44336;
+
 $breakPoints: (
   small: 20em, // 320px
   medium: 48em, // 768px
