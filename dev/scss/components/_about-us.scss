@@ -1,0 +1,53 @@
+/*--------------------------\
+    $About us
+\--------------------------*/
+.about-us {
+  display: flex;
+  flex-direction: column;
+  // flex-wrap: wrap; // Desktop style.
+  text-align: center;
+  
+  // & > * { outline: .25em dotted tomato; } // test
+
+  .container-subtitle {
+    // Deskto style.
+    // display: flex;
+    // justify-content: flex-end;
+    // width: 100%;
+  }
+    &__subtitle {
+      // Dektop style.
+      // text-align: initial; 
+      // width: 60%;
+      margin-top: 0;
+      margin-bottom: 1em;
+      color: var(--color-primary);
+    }
+  
+  .container-image {
+    // Desktop style.
+    // display: flex;
+    // flex-basis: 40%;
+  }
+    &__image { 
+      width: 24em;
+      margin-left: auto;
+      margin-right: auto;
+      // margin: auto; // Dektop style.
+      margin-bottom: 2.5em;
+    }
+
+  &__content {
+    // flex-basis: 60%; // Desktop style
+  }
+    &__text {
+      // text-align: initial; // Desktop style.
+      margin-bottom: 2.5em;
+      .strong { font-weight: 500; }
+    }
+    &__contact {
+      button:first-child {
+        margin-bottom: 1em;
+      }
+    }
+}
