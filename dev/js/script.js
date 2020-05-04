@@ -13,14 +13,18 @@ const toggleMenu = function (idIconMenu, idNav) {
 }
 
 const phoneNumberValidation = function () {
-  const buttonSocialEl = document.getElementById('js-btnContact')
-  let number = document.getElementById('js-btnContact').textContent
+  let number = null
+  let numberSubstring = null
+  let includeLada = null
   const isNumber = /[0-9]/g
   const includeCharacterMore = /\x2b/g // +
-  const numberSubstring = number.substring(0,3)
-  const includeLada = numberSubstring.includes('+52') || numberSubstring.includes('52')
-
+  const buttonSocialEl = document.getElementById('js-btnContact')
+  
   if (!number) return
+  number = document.getElementById('js-btnContact').textContent
+  numberSubstring = number.substring(0,3)
+  includeLada = numberSubstring.includes('+52') || numberSubstring.includes('52')
+
   if (isNumber.test(number)) {
 
     if (!(includeLada)) {
