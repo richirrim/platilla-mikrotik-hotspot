@@ -12,8 +12,8 @@ $color-gmail: invert(32%) sepia(78%) saturate(2179%) hue-rotate(341deg) brightne
       content: "";
       display: inline-block;
       margin-right: 1em;
-      width: 1.5em;
-      height: 1.5em;
+      min-width: 1.5em;
+      min-height: 1.5em;
       filter: $color-white;
   }
 }
