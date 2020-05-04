@@ -20,7 +20,8 @@ const phoneNumberValidation = function () {
   const includeCharacterMore = /\x2b/g // +
   const buttonSocialEl = document.getElementById('js-btnContact')
   
-  if (!number) return
+
+  if (!buttonSocialEl) return
   number = document.getElementById('js-btnContact').textContent
   numberSubstring = number.substring(0,3)
   includeLada = numberSubstring.includes('+52') || numberSubstring.includes('52')
