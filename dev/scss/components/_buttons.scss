@@ -1,4 +1,4 @@
-[class^="button"] {
+[class*="button"] {
 	outline: none;
 	border: none;
 	border-radius: .5em;
@@ -6,7 +6,7 @@
 	color: #455a64;
 	background-color: #cfd8dc;
 	text-transform: uppercase;
-	letter-spacing: var(--letter-spacing); // pendiente de cambiar
+	letter-spacing: var(--letter-spacing);
 	cursor: pointer;
 	width: 100%;
 	transition: all .3s;
@@ -16,12 +16,17 @@
 }
 
 
-
-%repeat-style {
+%social-buttons {
+  &:active { transform: scale(1) };
+}
+%border { border: 1px solid; }
+%btn {
 	color: var(--color-second);
 	background-color: transparent;
-	transition: all .3s;
+  transition: all .3s;
+	&:hover { background-color: rgba($color-second, .2); }
 }
+
 
 .button { box-shadow: rgba(#455a64, .2) 0 2px 4px; }
 .button-primary {
@@ -34,16 +39,34 @@
 }
 
 .button-secondary {
-	border: 1px solid;
-	@extend %repeat-style;
-	
-	&:hover { background-color: rgba($color-second, .2); }
+	@extend %border;
+	@extend %btn;
 }
 .button-text {
-	@extend %repeat-style;
-	
-	&:hover {
-		background-color: rgba($color-second, .2);	
-		text-decoration: underline;
-	}
+  @extend %btn;
+	&:hover { text-decoration: underline; }
+}
+
+.button-whatsapp {
+  @extend %border;
+  @extend %social-buttons;
+  @include social-buttons($color-whatsapp);
+}
+
+.button-gmail {
+  @extend %border;
+  @extend %social-buttons;
+  @include social-buttons($color-gmail);
+}
+
+.button-facebook {
+  @extend %border;
+  @extend %social-buttons;
+  @include social-buttons($color-facebook);
+}
+
+.button-mail {
+  @extend %border;
+  @extend %social-buttons;
+  @include social-buttons($color-primary);
 }
