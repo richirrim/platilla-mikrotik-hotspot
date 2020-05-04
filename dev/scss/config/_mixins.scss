@@ -1,0 +1,15 @@
+@mixin social-buttons($color) {
+  color: $color;
+  background-color: rgba($color, .3);
+  &:hover { background-color: rgba($color, .5); }
+}
+
+@mixin addIcon($pathIcon, $color) {
+  &::before {
+    content: "";
+    @content;
+    color: $color;
+    background-image: url($pathIcon);
+    filter: $color;
+  }
+}

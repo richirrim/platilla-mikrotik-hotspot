@@ -5,59 +5,41 @@ $color-facebook: invert(33%) sepia(70%) saturate(4356%) hue-rotate(197deg) brigh
 $color-gmail: invert(32%) sepia(78%) saturate(2179%) hue-rotate(341deg) brightness(98%) contrast(96%);
 
 [class*=icon-] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   &::before {
       content: "";
       display: inline-block;
-      width: 1em;
-      height: 1em;
+      margin-right: 1em;
+      width: 1.5em;
+      height: 1.5em;
       filter: $color-white;
   }
 }
 .icon-user {
-  &::before {
-    content: "";
-    color: var(--primary-color);
-    background-image: url('/images/icon-user.svg');
-    filter: $color-primary;
+  @include addIcon('/images/icon-user.svg', $color-primary) {
+    margin-right: 0;
   }
 }
 .icon-pass {
-  &::before {
-    content: "";
-    color: var(--primary-color);
-    background-image: url('/images/icon-lock.svg');
-    filter: $color-primary;
+  @include addIcon('/images/icon-lock.svg', $color-primary) {
+    margin-right: 0;
   }
 }
-
+// descargar icono que no falle
 .icon-whatsapp {
-  &::before {
-    content: "";
-    background-image: url('/images/icon-whatsapp.svg');
-    filter: $color-whatsapp;
-  }
+  @include addIcon('/images/icon-whatsapp.svg', $color-whatsapp)
 }
 
-.icon-email {
-  &::before {
-    content: "";
-    background-image: url('/images/icon-mail.svg');
-    filter: $color-primary;
-  }
+.icon-mail {
+  @include addIcon('/images/icon-mail.svg', $color-primary)
 }
 
 .icon-gmail {
-  &::before {
-    content: "";
-    background-image: url('/images/icon-gmail.svg');
-    filter: $color-gmail;
-  }
+  @include addIcon('/images/icon-mail.svg', $color-gmail)
 }
 
 .icon-facebook {
-  &::before {
-    content: "";
-    background-image: url('/images/icon-facebook.svg');
-    filter: $color-facebook;
-  }
+  @include addIcon('/images/icon-facebook.svg', $color-facebook)
 }
