@@ -18,18 +18,18 @@
   &__input {
     display: flex;
     border-radius: .5em;
-    padding-right: 1em;
     background-color: var(--color-bg);
     overflow: hidden;
 
     div.icon {
-      padding: 1em 1.5em;
+      padding: 1em 1em;
       background-color: var(--color-text2);
     }
     input { 
       border: none;
       background: transparent;
       padding-left: 1em;
+      padding-right: 1em;
       caret-color: var(--color-second);
       color: var(--color-primary);
       width: 100%;
