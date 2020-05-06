@@ -1,0 +1,27 @@
+// [class^=card-] { border: .05em solid black; } // test
+
+%card-style-repeat {
+  border-radius: 1em;
+  padding: 2em 1em;
+}
+// Nota: limitar parrafo de car a 5 líneas y más de eso que se oculte.
+.card-services {
+  @extend %card-style-repeat;
+  text-align: center;
+  background-color: var(--color-primary);
+  transition: all .3s;
+
+  &__image {
+    width: 10em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5em;
+  }
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 1em;
+  }
+  &__text { margin: 0; }
+
+  &:hover { transform: scale(.96); }
+}
