@@ -1,7 +1,7 @@
 mixin cardAdsBusiness(nameBusiness, logoAndExtension, text, buttonContact)
   div.card-business
     div.card-business__head
-      div.card-business__container-icon
+      div.card-business__container-icon.b-shadow
         img(class="card-business__icon" src=`/images/logo-business-${logoAndExtension}` alt="logo del negocio")
       h3.card-business__subtitle= nameBusiness
     p.card-business__text#js-textClamp2= text
