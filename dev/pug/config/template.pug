@@ -4,6 +4,7 @@ block config
   include /mixins/form-mixin
   include /mixins/button-contact-mixin
   include /mixins/card-services
+  include /mixins/card-business
 
 doctype html
 html(lang="es")
@@ -29,5 +30,6 @@ html(lang="es")
     include /includes/main-footer
     
     block scripts
+      script(src="/js/clamp.js")
       script(src="/js/script.js")
       script(src="https://polyfill.io/v3/polyfill.min.js?features=default")

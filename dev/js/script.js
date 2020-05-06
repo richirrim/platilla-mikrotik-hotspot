@@ -49,7 +49,20 @@ const phoneNumberValidation = function () {
       .replace(/((981)+\s[0-9]{3}){1}/, '$1 ')
   }
 }
-// Validar telefo, el formato ya esta
+
+// Limita un parrafo a las líneas que se decee.
+const textClamp = function (textClamp, numberLine) {
+  // https://github.com/josephschmitt/Clamp.js
+  const pEl = document.getElementById(textClamp)
+  if (!pEl) return
+  if (!numberLine) {
+    $clamp(pEl, { clamp: 5 })
+    return
+  }
+  $clamp(pEl, { clamp: numberLine })
+}
+// Validar sea un telefono con la estructura real, el texto ya esta formateado.
 // Validar el email y su formato
+textClamp('js-textClamp')
 phoneNumberValidation()
 toggleMenu('js-menu-icon', 'js-nav')
