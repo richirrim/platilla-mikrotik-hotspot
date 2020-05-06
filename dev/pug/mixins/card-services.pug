@@ -2,4 +2,4 @@ mixin cardServices(imgSVG, title, description)
   div.card-services
     img(class="card-services__image" src=`/images/${imgSVG}.svg` alt="Imagen, servicios de soporte a usuarios y equipos.")
     h3.card-services__subtitle= title
-    p.card-services__text= description
+    p(class="card-services__text" id="js-textClamp")= description
