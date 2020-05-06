@@ -1,0 +1,15 @@
+mixin cardAdsBusiness(nameBusiness, logoAndExtension, text, buttonContact)
+  div.card-business
+    div.card-business__head
+      div.card-business__container-icon
+        img(class="card-business__icon" src=`/images/logo-business-${logoAndExtension}` alt="logo del negocio")
+      h3.card-business__subtitle= nameBusiness
+    p.card-business__text#js-textClamp2= text
+    +buttonContact(buttonContact.class, buttonContact.icon, buttonContact.text)
+
+//- Example: El parametro "buttonContact" recibe un object
+  +cardOtherBusiness('twitch', 'icon-twitch', ... , {
+    class: 'button-mail', 
+    icon: 'icon-mail',
+    text: 'twitch.ipsum@gmail.com'
+  })
