@@ -7,6 +7,7 @@ import plumber from 'gulp-plumber'
 import imagemin from 'gulp-imagemin'
 import autoprefixer from 'gulp-autoprefixer'
 import browserSync from 'browser-sync'
+import browserify from 'gulp-browserify'
 
 const server = browserSync.create()
 sass.compiler = require('node-sass')
@@ -35,7 +36,12 @@ const paths = {
 function babelJs () {
   return src(paths.scripts.src)
     .pipe(plumber())
-    .pipe(babel())
+    .pipe(browserify({
+      insertGlobals : true
+    }))
+    .pipe(babel({ 
+        presets: ["@babel/preset-env"]
+      }))
     .pipe(minify({
       ext: {
         src: '-min.js',
