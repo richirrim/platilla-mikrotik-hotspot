@@ -1,17 +1,49 @@
+/**
+ * Library: Glide JS
+ */
+const Glide = require('@glidejs/glide')
+
+const glideConfig = {
+  element: document.querySelector('.glide'),
+  options: {
+    type: 'slide',
+    startAt: 0,
+    perView: 3,
+    focusAt: 'center',
+    keyboard: true,
+    gap: 24,
+    breakpoints: {
+      720: { perView: 2 },
+      480: { perView: 1 }
+    }
+  }
+}
+
+new Glide(glideConfig.element, glideConfig.options).mount()
+
+
+/**
+ * function: toggleMenu()
+ * 
+ * @param {string} idIconMenu 
+ * @param {string} idNav 
+ */
 const toggleMenu = function (idIconMenu, idNav) {
   const toggelEl = document.getElementById(idIconMenu)
   const menuEl = document.getElementById(idNav)
   
-  if (!(toggleMenu && menuEl)) {
-    console.warn('Alguno de los elementos no existen ⚠')
-    return
-  }
+  if (!(toggleMenu && menuEl)) return
   
   toggelEl.addEventListener('click', () => {
     menuEl.classList.toggle('show')
   })
 }
 
+/**
+ * function: phoneNumberValidation()
+ * 
+ * Da formato al texto de un número celular.
+ */
 const phoneNumberValidation = function () {
   let number = null
   let numberSubstring = null
@@ -50,10 +82,19 @@ const phoneNumberValidation = function () {
   }
 }
 
-// Limita un parrafo a las líneas que se decee.
-const textClamp = function (textClamp, numberLine) {
+
+/**
+ * function: textClamp()
+ * 
+ * @param {string} idTextClamp 
+ * @param {number} numberLine 
+ * 
+ * Limita un parrafo a las líneas que se decee mostrar (visualmente).
+ *  Por defecto, muestra 5 líneas la función.
+ */
+const textClamp = function (idTextClamp, numberLine) {
   // https://github.com/josephschmitt/Clamp.js
-  const pEl = document.getElementById(textClamp)
+  const pEl = document.getElementById(idTextClamp)
   if (!pEl) return
   if (!numberLine) {
     $clamp(pEl, { clamp: 5 })
