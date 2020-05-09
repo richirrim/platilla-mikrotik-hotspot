@@ -5,7 +5,7 @@ mixin glide(cards)
     div(class="glide__track" data-glide-el="track")
       ul.glide__slides
         each card in cards
-          li.glide__slide: +cardServices(card.imgSVG, card.title, card.text)
+          li.glide__slide: +cardServices(card.nameFile, card.title, card.text)
     // ---------- glide controls --------------- 
     div(class="glide__arrows" data-glide-el="controls")
       button(class="glide__arrow  glide__arrow--left button  icon-arrow-left" data-glide-dir="<" type="button")
