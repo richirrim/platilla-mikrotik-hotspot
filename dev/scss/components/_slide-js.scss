@@ -1,0 +1,22 @@
+.glide {
+  // outline: 1px solid tomato;
+  // > * { outline: 1px solid steelblue; }
+  
+  &__track {}
+  &__slides {} // este elemento pone el margin que separa los bottones.
+    &__slide {}
+  &__arrows { 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+  }
+    &__arrow { 
+      flex-basis: 10%;
+      background-color: var(--color-text2); 
+
+      &:hover { background-color: var(--color-white) }
+    }
+    &__arrow--left {}
+    &__arrow--right {}
+}
