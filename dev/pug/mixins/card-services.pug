@@ -1,5 +1,5 @@
-mixin cardServices(name, title, description)
-  div.card-services.b-shadow
+mixin cardServices(id, name, title, description)
+  div(class="card-services  b-shadow" id="js-card-service")
     img(class="card-services__image" src=`/images/section-service-${name}.svg` alt="Imagen, servicios de soporte a usuarios y equipos.")
     h3.card-services__subtitle= title
-    p(class="card-services__text" id="js-textClamp")= description
+    p(class="card-services__text" id=`js-text${id}`)= description
