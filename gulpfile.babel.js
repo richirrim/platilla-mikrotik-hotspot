@@ -2,12 +2,14 @@ import { series, parallel, dest, src, watch } from 'gulp'
 import pug from 'gulp-pug'
 import sass from 'gulp-sass'
 import minify from 'gulp-minify'
-import babel from 'gulp-babel'
 import plumber from 'gulp-plumber'
 import imagemin from 'gulp-imagemin'
 import autoprefixer from 'gulp-autoprefixer'
 import browserSync from 'browser-sync'
-import browserify from 'gulp-browserify'
+import babelify from 'babelify'
+import source from 'vinyl-source-stream'
+import buffer from 'vinyl-buffer'
+import browserify from 'browserify'
 
 const server = browserSync.create()
 sass.compiler = require('node-sass')
@@ -24,7 +26,8 @@ const paths = {
     dest: './public/css/'
   },
   scripts: {
-    src: './dev/js/**/*.js',
+    srcMultipleFiles: './dev/js/**/*.js',
+    srcSingleFile: './dev/js/index.js',
     dest: './public/js/'
   },
   images: {
@@ -34,14 +37,17 @@ const paths = {
 };
 
 function babelJs () {
-  return src(paths.scripts.src)
-    .pipe(plumber())
-    .pipe(browserify({
-      insertGlobals : true
-    }))
-    .pipe(babel({ 
-        presets: ["@babel/preset-env"]
-      }))
+  return browserify(paths.scripts.srcSingleFile)
+    .transform(babelify, {
+      global: true
+    })
+    .bundle()
+    .on('error', function (err) {
+      console.error(err)
+      this.emit('end')
+    })
+    .pipe(source('script.js'))
+    .pipe(buffer())
     .pipe(minify({
       ext: {
         src: '-min.js',
@@ -97,7 +103,7 @@ function startServer () {
 function watchFiles () {
   watch(paths.html.src, pugToHtml)
   watch(paths.styles.src, sassToCss)
-  watch(paths.scripts.src, babelJs)
+  watch(paths.scripts.srcMultipleFiles, babelJs)
   watch(paths.images.src, optimizeImg)
   
   watch(paths.html.dest).on('change', server.reload)
