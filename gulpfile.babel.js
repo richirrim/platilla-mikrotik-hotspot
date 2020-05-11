@@ -63,7 +63,6 @@ const pugBuild = function () {
   return src(paths.html.src)
     .pipe(plumber())
     .pipe(pug({
-      pretty: true,
       basedir: paths.rootPug
     }))
     .pipe(dest(paths.html.dest))
@@ -74,6 +73,7 @@ const pugDev = function () {
   return src(paths.html.src)
     .pipe(plumber())
     .pipe(pug({
+      pretty: true,
       basedir: paths.rootPug
     }))
     .pipe(dest(paths.html.dest))
