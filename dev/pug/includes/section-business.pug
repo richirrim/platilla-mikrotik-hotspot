@@ -1,0 +1,35 @@
+// ------------- section business ---------------- 
+section.business.l-section
+  h2(class="business__subtitle  center-content")= 'Otros negocios (example ads)'.toUpperCase()
+  +glide([
+    {
+      businessName: 'Twitch',
+      logoAndExtension: 'money.png',
+      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe qui in quas nam, magni porro itaque quam laboriosam quos architecto sed voluptates quia cum eveniet minima quis suscipit repellendus sunt!',
+      cardAttributes: {
+        class: 'button-mail', 
+        icon: 'icon-mail',
+        text: 'twitch.ipsum@gmail.com'
+      }
+    },
+    {
+      businessName: 'Tienda Pepito',
+      logoAndExtension: 'puer.png',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maiores alias saepe possimus neque qui ad eius in aliquid voluptates cupiditate, eveniet molestiae illum dignissimos. Odio consequuntur dolor ipsam iure.',
+      cardAttributes: {
+        class: 'button-whatsapp', 
+        icon: 'icon-whatsapp',
+        text: '+52 981 432 2145'
+      }
+    },
+    {
+      businessName: 'LinkedIn',
+      logoAndExtension: 'money.png',
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maiores alias saepe possimus neque qui ad eius in aliquid voluptates cupiditate, eveniet molestiae illum dignissimos. Odio consequuntur dolor ipsam iure.',
+      cardAttributes: {
+        class: 'button-facebook', 
+        icon: 'icon-facebook',
+        text: '@linkedin'
+      }
+    }
+  ], 'business', 'js-glide-business')

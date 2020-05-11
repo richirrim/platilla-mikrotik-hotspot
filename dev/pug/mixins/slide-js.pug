@@ -1,11 +1,14 @@
 // ------------- glide js ---------------
-mixin glide(cards)
-  div(class="glide")
+mixin glide(cards, section, idGlide)
+  div(class="glide" id=idGlide)
     // ------- glide items ----------------- 
     div(class="glide__track" data-glide-el="track")
       ul.glide__slides
         each card, id in cards
-          li.glide__slide: +cardServices(id, card.nameFile, card.title, card.text)
+          if section === 'services'
+            li.glide__slide: +cardServices(id, card.nameFile, card.title, card.text)
+          else
+            li.glide__slide: +cardAdsBusiness(id, card.businessName, card.logoAndExtension, card.description, card.cardAttributes)
     // ---------- glide controls --------------- 
     div(class="glide__arrows" data-glide-el="controls")
       button(class="glide__arrow  glide__arrow--left button  icon-arrow-left" data-glide-dir="<" type="button")

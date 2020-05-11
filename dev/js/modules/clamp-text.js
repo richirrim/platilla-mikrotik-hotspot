@@ -27,8 +27,8 @@ const addClampSingleElement = function (id, numberLine) {
  * Limita un parrafo a las líneas que se decee mostrar (visualmente).
  * Esta función modifica más de un elemento.
  */
-const addClampMultipleElements = function (elementClass) {
-  const cards = Array.from(document.querySelectorAll('#js-card-service'))
+const addClampMultipleElements = function (elementClass, id) {
+  const cards = Array.from(document.querySelectorAll(id))
   if (!(cards.length > 0)) return
 
   for (const card of cards) {
