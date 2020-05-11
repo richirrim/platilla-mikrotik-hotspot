@@ -36,7 +36,8 @@ const paths = {
   }
 };
 
-function babelJs () {
+const scripts = function () {
+  /** Tarea para desarrollo y tambíen para producción */
   return browserify(paths.scripts.srcSingleFile)
     .transform(babelify, {
       global: true
@@ -57,31 +58,53 @@ function babelJs () {
     .pipe(dest(paths.scripts.dest))
 }
 
-function pugToHtml () {
+const pugBuild = function () {
+  /** Tarea para producción */
   return src(paths.html.src)
     .pipe(plumber())
     .pipe(pug({
       pretty: true,
-        /* Agregar el "basedir" permite trabajar con rutas 
-        relativas al servidor o raiz*/
-        basedir: paths.rootPug
+      basedir: paths.rootPug
     }))
     .pipe(dest(paths.html.dest))
 }
 
-function sassToCss () {
+const pugDev = function () {
+   /** Tarea para desarrollo */
+  return src(paths.html.src)
+    .pipe(plumber())
+    .pipe(pug({
+      basedir: paths.rootPug
+    }))
+    .pipe(dest(paths.html.dest))
+}
+
+const sassBuild = function () {
+  /** Tarea para producción */
   return src(paths.styles.src)
     .pipe(plumber())
     .pipe(sass({
-      // outputStyle: 'compressed',
-      outputStyle: 'expanded'
+      outputStyle: 'expanded',
+      includePaths: ['./node_modules']
     }))
       .on('error', sass.logError)
     .pipe(autoprefixer({ cascade: false }))
     .pipe(dest(paths.styles.dest))
 }
 
-function optimizeImg () {
+const sassDev = function () {
+  /** Tarea para desarrollo */
+  return src(paths.styles.src)
+    .pipe(plumber())
+    .pipe(sass({
+      includePaths: ['./node_modules']
+    }))
+    .pipe(autoprefixer({ cascade: false }))
+    .pipe(dest(paths.styles.dest))
+}
+
+const images = function () {
+  /** Tarea para producción */
   return src(paths.images.src)
     .pipe(imagemin([
       imagemin.gifsicle({ interlaced: true }),
@@ -89,6 +112,12 @@ function optimizeImg () {
       imagemin.optipng({ optimizationLevel: 5 }),
       imagemin.svgo()
     ]))
+    .pipe(dest(paths.images.dest))
+}
+
+const imagesDev = function () {
+  /** Tarea para desarrollo */
+  return src(paths.images.src)
     .pipe(dest(paths.images.dest))
 }
 
@@ -101,13 +130,14 @@ function startServer () {
 }
 
 function watchFiles () {
-  watch(paths.html.src, pugToHtml)
-  watch(paths.styles.src, sassToCss)
-  watch(paths.scripts.srcMultipleFiles, babelJs)
-  watch(paths.images.src, optimizeImg)
+  watch(paths.html.src, pugDev)
+  watch(paths.styles.src, sassDev)
+  watch(paths.scripts.srcMultipleFiles, scripts)
+  watch(paths.images.src, imagesDev)
   
   watch(paths.html.dest).on('change', server.reload)
   watch(paths.scripts.dest).on('change', server.reload)
 }
 
-exports.default = parallel(startServer, optimizeImg, series(sassToCss, pugToHtml, babelJs, watchFiles))
+exports.dev = parallel(startServer, imagesDev, watchFiles, series(sassDev, pugDev, scripts)) // tasks dev.
+exports.prod = series(images, sassBuild, pugBuild, scripts) // tasks production.
