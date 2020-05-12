@@ -1,3 +1,21 @@
 // ----------- main footer -----------  
-footer.main-footer
-  h2 Soy el footer
+footer.main-footer.b-shadow
+  div.container.center-content
+    h2(class="main-footer__subtitle  center-content")= `Soporte ${siteName}`.toUpperCase()
+    
+    div.main-footer__contact
+      h3= 'Contactos'.toUpperCase()
+    
+    div.main-footer__socialnetworks
+      h3= 'En redes'.toUpperCase()
+    
+    div.main-footer__services
+      h3= 'Nuestros Servicios'.toUpperCase()
+      ul
+        li ✅ Soporte a usuarios y equipos.
+        li ✅ Mantenimiento del equipo de cómputo.
+        li ✅ Diseño y desarrollo Web.
+        li ✅ Instalación de redes LAN.
+  
+  div(class="main-footer__credits  center-content")
+    p=`Made with ❤ by ${siteName}`
