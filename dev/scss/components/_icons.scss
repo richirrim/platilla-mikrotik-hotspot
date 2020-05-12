@@ -54,3 +54,20 @@ $color-gmail: invert(32%) sepia(78%) saturate(2179%) hue-rotate(341deg) brightne
 .icon-facebook {
   @include addIcon('/images/icon-facebook.svg', $color-facebook)
 }
+
+// Icons white color
+.icon-whatsapp-white {
+  @include addIcon('/images/icon-whatsapp.svg', $color-white)
+}
+
+.icon-mail-white {
+  @include addIcon('/images/icon-mail.svg', $color-white)
+}
+
+.icon-gmail-white {
+  @include addIcon('/images/icon-mail.svg', $color-white)
+}
+
+.icon-facebook-white {
+  @include addIcon('/images/icon-facebook.svg', $color-white)
+}

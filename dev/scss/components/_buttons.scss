@@ -3,7 +3,7 @@
 	border: none;
 	border-radius: .5em;
 	padding: 1em;
-	color: #455a64;
+  color: #455a64;
 	background-color: #cfd8dc;
 	text-transform: uppercase;
 	letter-spacing: var(--letter-spacing);
@@ -70,4 +70,13 @@
   @extend %border;
   @extend %social-buttons;
   @include social-buttons($color-primary);
+}
+
+.button-social-secondary {
+  padding: 0;
+  color: var(--color-white);
+  background-color: transparent;
+  &:hover { background-color: transparent; }
+  &:active { transform: initial; }
+  &:focus { box-shadow: initial; }
 }
