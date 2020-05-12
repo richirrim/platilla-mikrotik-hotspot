@@ -7,36 +7,44 @@
   background-color: var(--color-text);
   overflow: hidden;
   
-  .container { 
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-bottom: 4em; // 64px
-  }
   &__subtitle { 
     margin-top: 0;
     margin-bottom: 4em;
     color: var(--color-primary); 
   }
+
+  .container { 
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 4em; // 64px
+  }
+  div[class^=main-footer__]:not(:last-child) { margin-bottom: 2.5em; }
   h3 { 
     margin: 0;
     margin-bottom: 2.125em; // 34px
     color: var(--color-white); 
   }
-  ul {
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 0;
-    text-align: left; 
-    width: 85%;
+
+
+  &__contact { button:not(:last-child) { margin-bottom: .5em; } }
+  &__socialnetworks {}
+  &__services {
+    ul {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 0;
+      text-align: left; 
+      width: 85%;
+      li {
+        color: var(--color-white);
+        list-style-type: none;
+        &:not(:last-child) { margin-bottom: 1em; }
+      }
+    }
   }
-  li {
-    color: var(--color-white);
-    list-style-type: none;
-    &:not(:last-child) { margin-bottom: 1em; }
-  }
-  .main-footer__credits {
+  &__credits {
     background-color: var(--color-text2);
     p {
       margin: 0;
