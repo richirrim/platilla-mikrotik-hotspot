@@ -2,12 +2,15 @@
 %card-style-repeat {
   border-radius: 1em;
   padding: 2em 1em;
+  height: 100%;
   transition: all .3s;
   &:hover { transform: scale(.96); }
 }
 
 .card-services {
   @extend %card-style-repeat;
+  margin-right: auto;
+  margin-left: auto;
   text-align: center;
   background-color: var(--color-primary);
 
@@ -31,6 +34,8 @@
 .card-business {
   --height: 4em;
   @extend %card-style-repeat;
+  display: flex;
+  flex-direction: column;
 
   &__head {
     display: flex;
@@ -51,4 +56,5 @@
     }
     &__subtitle { margin: 0; }
   &__text { margin-bottom: 1.5em; }
+  button { margin-top: auto; }
 }
