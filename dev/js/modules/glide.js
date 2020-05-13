@@ -11,7 +11,7 @@ export const glide = function (id) {
       startAt: 0,
       focusAt: 'center',
       keyboard: true,
-      perView: 2,
+      perView: 1,
       gap: 24,
       breakpoints: {
         1200: {
