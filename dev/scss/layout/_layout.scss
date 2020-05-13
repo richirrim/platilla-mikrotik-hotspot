@@ -1,11 +1,7 @@
 /*-----------------------*\
     $Layout
 \*-----------------------*/
-main {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-top: $header-height + 2;
-}
+main { padding-top: $header-height + 2; }
 .l-container {
   // outline: 2px dotted steelblue; // test
   margin-left: auto;
@@ -19,6 +15,8 @@ main {
 }
 .l-section {
   // outline: 2px dotted tomato; // test
+  margin-left: 1em;
+  margin-right: 1em;
   margin-bottom: 5.5rem; // 88px
 }
 .center-block {
