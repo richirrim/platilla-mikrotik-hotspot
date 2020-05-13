@@ -19,13 +19,18 @@ export const glide = function (id) {
           peek: 60,
           gap: 16
         },
-        1050: { peek: 80 },
-        900: { gap: 24 },
-        800: { gap: 32 },
-        700: { peek: 160 },
+        980: { 
+          perView: 2,
+          peek: 60 
+        },
+        800: { 
+          perView: 2,
+          gap: 32 
+        },
+        700: { peek: 150 },
         600: { peek: 120 },
         540: { peek: 80 },
-        500: { peek: 90, },
+        500: { peek: 70 },
         480: { peek: 20 },
         380: { peek: 0 }
       }
