@@ -1,6 +1,12 @@
 $header-height: 4rem;
 $max-width: 75rem;
 
+$breakPoints: (
+  small: 20em, // 320px
+  medium: 48em, // 768px
+  large: 75em // 1200px
+);
+
 /* color palet */
 :root {
   --color-primary: #FF9800;
@@ -32,12 +38,15 @@ $color-white: #FAFAFA;
   --body-font-size: 1em;
   --smaller-font-size: .8em;
   --small-font-size: .64em;
-  // --h1-font-size: 2.441em;
-  // --h2-font-size: 1.953em;
-  // --h3-font-size: 1.563em;
-  // --body-font-size: 1.25em;
-  // --smaller-font-size: .1em;
-  // --small-font-size: .8em;
+
+  @include from (medium) {
+    --h1-font-size: 2.441em;
+    --h2-font-size: 1.953em;
+    --h3-font-size: 1.563em;
+    --body-font-size: 1.25em;
+    --smaller-font-size: .1em;
+    --small-font-size: .8em;
+  }
 }
 
 /* Variables de apilamiento */
@@ -59,12 +68,6 @@ $color-white: #FAFAFA;
 $color-facebook: #1976d2;
 $color-whatsapp: #4CAF50;
 $color-gmail: #F44336;
-
-$breakPoints: (
-  small: 20em, // 320px
-  medium: 48em, // 768px
-  large: 75em // 1200px
-);
 
 $shadow: rgba($color-text2, .2) 0 .25em .5em;
 

@@ -13,3 +13,15 @@
     filter: $color;
   }
 }
+
+@mixin from($breakPoint) {
+  @if map-has-key($breakPoints, $breakPoint) {
+    @media screen and (min-width: map_get($breakPoints, $breakPoint)) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $breakPoint) {
+      @content;
+    }
+}
+}
