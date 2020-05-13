@@ -1,24 +1,25 @@
 // ----------- main footer -----------  
 footer.main-footer.l-section.shadow
-  div.container.center-content
-    h2(class="main-footer__subtitle  center-content")= `Soporte ${siteName}`.toUpperCase()
+  div.l-container
+    div.container.center-content
+      h2(class="main-footer__subtitle  center-content")= `Soporte ${siteName}`.toUpperCase()
+      
+      div.main-footer__contact
+        h3= 'Contactanos'.toUpperCase()
+        +buttonContact('button-social-secondary', 'icon-whatsapp-white', '+52 981 2345678')
+        +buttonContact('button-social-secondary', 'icon-mail-white', 'inoutisolucionesti@gmail.com')
+
+      div.main-footer__socialnetworks
+        h3= 'En redes'.toUpperCase()
+        +buttonContact('button-social-secondary', 'icon-facebook-white', '@inoutisoluciones')
+
+      div.main-footer__services
+        h3= 'Nuestros Servicios'.toUpperCase()
+        ul
+          li ✅ Soporte a usuarios y equipos.
+          li ✅ Mantenimiento del equipo de cómputo.
+          li ✅ Diseño y desarrollo Web.
+          li ✅ Instalación de redes LAN.
     
-    div.main-footer__contact
-      h3= 'Contactanos'.toUpperCase()
-      +buttonContact('button-social-secondary', 'icon-whatsapp-white', '+52 981 2345678')
-      +buttonContact('button-social-secondary', 'icon-mail-white', 'inoutisolucionesti@gmail.com')
-
-    div.main-footer__socialnetworks
-      h3= 'En redes'.toUpperCase()
-      +buttonContact('button-social-secondary', 'icon-facebook-white', '@inoutisoluciones')
-
-    div.main-footer__services
-      h3= 'Nuestros Servicios'.toUpperCase()
-      ul
-        li ✅ Soporte a usuarios y equipos.
-        li ✅ Mantenimiento del equipo de cómputo.
-        li ✅ Diseño y desarrollo Web.
-        li ✅ Instalación de redes LAN.
-  
   div(class="main-footer__credits  center-content")
     p=`Made with ❤ by ${siteName}`

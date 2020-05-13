@@ -4,7 +4,7 @@
   padding-top: 4em; // 64px
   background-color: var(--color-text);
   overflow: hidden;
-  
+  div.l-container { flex-direction: column; }
   &__subtitle { 
     margin-top: 0;
     margin-bottom: 4em;

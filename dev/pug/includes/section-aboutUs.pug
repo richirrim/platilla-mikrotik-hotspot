@@ -1,31 +1,32 @@
 // -------------- section about us ------------- 
 section.about-us.l-section
-  div.container-subtitle
-    h2.about-us__subtitle= `${'Nosotros'.toUpperCase()}`
-  div.container-image
-    img.about-us__image(src="/images/section-about-us.svg", alt="Imagen de la sección Nosotros")
-  
-  div.about-us__content
-    div.about-us__text
-      p 
-        span.strong INOUTI SOLUCIONES TI 
-        | es una empresa inmersa en el mundo 
-        | de la tecnología, que mejora y optimiza los recursos TI 
-        | de pequeñas y medianas empresas. Ayudándolas a 
-        | incorporase a la era digital que estamos viviendo en la 
-        | actualidad.
-      p
-        | Proporcionamos servicios relacionados con las tecnologías 
-        | de la información: Mantenimiento preventivo y correctivo 
-        | de equipos informáticos, instalación de redes de área 
-        | local y desarrollo web.
-      p
-        | Nuestros servicios están enfocados en mejorar la calidad
-        | y rentabilidad de nuestros clientes. En cada servicio que 
-        | INOUTI ofrece estamos firmemente comprometidos con brindarle 
-        | un servicio óptimo y de calidad, de acuerdo a las necesidades 
-        | de su organización.
+  div.l-container
+    div.container-subtitle
+      h2.about-us__subtitle= `${'Nosotros'.toUpperCase()}`
+    div.container-image
+      img.about-us__image(src="/images/section-about-us.svg", alt="Imagen de la sección Nosotros")
+    
+    div.about-us__content
+      div.about-us__text
+        p 
+          span.strong INOUTI SOLUCIONES TI 
+          | es una empresa inmersa en el mundo 
+          | de la tecnología, que mejora y optimiza los recursos TI 
+          | de pequeñas y medianas empresas. Ayudándolas a 
+          | incorporase a la era digital que estamos viviendo en la 
+          | actualidad.
+        p
+          | Proporcionamos servicios relacionados con las tecnologías 
+          | de la información: Mantenimiento preventivo y correctivo 
+          | de equipos informáticos, instalación de redes de área 
+          | local y desarrollo web.
+        p
+          | Nuestros servicios están enfocados en mejorar la calidad
+          | y rentabilidad de nuestros clientes. En cada servicio que 
+          | INOUTI ofrece estamos firmemente comprometidos con brindarle 
+          | un servicio óptimo y de calidad, de acuerdo a las necesidades 
+          | de su organización.
 
-    div.about-us__contact
-      +buttonContact('button-whatsapp', 'icon-whatsapp', '9811234567')
-      +buttonContact('button-gmail', 'icon-gmail', 'inoutisolucionesti@gmail.com')
+      div.about-us__contact
+        +buttonContact('button-whatsapp', 'icon-whatsapp', '9811234567')
+        +buttonContact('button-gmail', 'icon-gmail', 'inoutisolucionesti@gmail.com')

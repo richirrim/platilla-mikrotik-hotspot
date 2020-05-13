@@ -11,7 +11,8 @@ export const glide = function (id) {
       startAt: 0,
       focusAt: 'center',
       keyboard: true,
-      perView: 1,
+      perView: 3,
+      peek: 80,
       gap: 24,
       breakpoints: {
         1200: {
@@ -19,20 +20,31 @@ export const glide = function (id) {
           peek: 60,
           gap: 16
         },
-        980: { 
+        950: { 
           perView: 2,
-          peek: 60 
+          peek: 30 
         },
         800: { 
           perView: 2,
-          gap: 32 
+          peek: 10,
+          gap: 24 
         },
-        700: { peek: 150 },
-        600: { peek: 120 },
-        540: { peek: 80 },
-        500: { peek: 70 },
-        480: { peek: 20 },
-        380: { peek: 0 }
+        700: { 
+          perView: 1,
+          peek: 90 
+        },
+        600: { 
+          perView: 1,
+          peek: 80 
+        },
+        500: { 
+          perView: 1,
+          peek: 20 
+        },
+        380: { 
+          perView: 1,
+          peek: 0 
+        }
       }
     }
   }

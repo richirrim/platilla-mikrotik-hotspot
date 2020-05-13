@@ -1,65 +1,66 @@
 // ------------- section business ---------------- 
 section.business.l-section
-  h2(class="business__subtitle  center-content")= 'Otros negocios (example ads)'.toUpperCase()
-  +glide([
-    {
-      businessName: 'Item 1',
-      logoAndExtension: 'money.png',
-      description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe qui in quas nam, magni porro itaque quam laboriosam quos architecto sed voluptates quia cum eveniet minima quis suscipit repellendus sunt!',
-      cardAttributes: {
-        class: 'button-mail', 
-        icon: 'icon-mail',
-        text: 'twitch.ipsum@gmail.com'
+  div.l-container
+    h2(class="business__subtitle  center-content")= 'Otros negocios (example ads)'.toUpperCase()
+    +glide([
+      {
+        businessName: 'Item 1',
+        logoAndExtension: 'money.png',
+        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe qui in quas nam, magni porro itaque quam laboriosam quos architecto sed voluptates quia cum eveniet minima quis suscipit repellendus sunt!',
+        cardAttributes: {
+          class: 'button-mail', 
+          icon: 'icon-mail',
+          text: 'twitch.ipsum@gmail.com'
+        }
+      },
+      {
+        businessName: 'Item 2',
+        logoAndExtension: 'puer.png',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maiores alias saepe possimus neque qui ad eius in aliquid voluptates cupiditate, eveniet molestiae illum dignissimos. Odio consequuntur dolor ipsam iure.',
+        cardAttributes: {
+          class: 'button-whatsapp', 
+          icon: 'icon-whatsapp',
+          text: '+52 981 432 2145'
+        }
+      },
+      {
+        businessName: 'Item 3',
+        logoAndExtension: 'money.png',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maiores alias saepe possimus neque qui ad eius in aliquid voluptates cupiditate, eveniet molestiae illum dignissimos. Odio consequuntur dolor ipsam iure.',
+        cardAttributes: {
+          class: 'button-facebook', 
+          icon: 'icon-facebook',
+          text: '@linkedin'
+        }
+      },
+      {
+        businessName: 'item 4',
+        logoAndExtension: 'puer.png',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maiores alias saepe possimus.',
+        cardAttributes: {
+          class: 'button-gmail', 
+          icon: 'icon-gmail',
+          text: 'item-4@gmail.com'
+        }
+      },
+      {
+        businessName: 'item 5',
+        logoAndExtension: 'money.png',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maiores alias saepe possimus. Atque maiores alias saepe possimus.',
+        cardAttributes: {
+          class: 'button-mail', 
+          icon: 'icon-mail',
+          text: 'item-5@hotmail.com'
+        }
+      },
+      {
+        businessName: 'item 6',
+        logoAndExtension: 'puer.png',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maiores alias saepe possimus. Atque maiores alias saepe possimus. Atque maiores alias saepe possimus.',
+        cardAttributes: {
+          class: 'button-whatsapp', 
+          icon: 'icon-whatsapp',
+          text: '+52 981 123 3467'
+        }
       }
-    },
-    {
-      businessName: 'Item 2',
-      logoAndExtension: 'puer.png',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maiores alias saepe possimus neque qui ad eius in aliquid voluptates cupiditate, eveniet molestiae illum dignissimos. Odio consequuntur dolor ipsam iure.',
-      cardAttributes: {
-        class: 'button-whatsapp', 
-        icon: 'icon-whatsapp',
-        text: '+52 981 432 2145'
-      }
-    },
-    {
-      businessName: 'Item 3',
-      logoAndExtension: 'money.png',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maiores alias saepe possimus neque qui ad eius in aliquid voluptates cupiditate, eveniet molestiae illum dignissimos. Odio consequuntur dolor ipsam iure.',
-      cardAttributes: {
-        class: 'button-facebook', 
-        icon: 'icon-facebook',
-        text: '@linkedin'
-      }
-    },
-    {
-      businessName: 'item 4',
-      logoAndExtension: 'puer.png',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maiores alias saepe possimus.',
-      cardAttributes: {
-        class: 'button-gmail', 
-        icon: 'icon-gmail',
-        text: 'item-4@gmail.com'
-      }
-    },
-    {
-      businessName: 'item 5',
-      logoAndExtension: 'money.png',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maiores alias saepe possimus. Atque maiores alias saepe possimus.',
-      cardAttributes: {
-        class: 'button-mail', 
-        icon: 'icon-mail',
-        text: 'item-5@hotmail.com'
-      }
-    },
-    {
-      businessName: 'item 6',
-      logoAndExtension: 'puer.png',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maiores alias saepe possimus. Atque maiores alias saepe possimus. Atque maiores alias saepe possimus.',
-      cardAttributes: {
-        class: 'button-whatsapp', 
-        icon: 'icon-whatsapp',
-        text: '+52 981 123 3467'
-      }
-    }
-  ], 'business', 'js-glide-business')
+    ], 'business', 'js-glide-business')
