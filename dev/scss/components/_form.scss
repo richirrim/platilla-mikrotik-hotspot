@@ -2,6 +2,9 @@
   border-radius: .5em;
   background-color: var(--color-text);
   padding: 2.5em 1.5em;
+  @include from(medium) {
+    padding: 5.5em 2em;
+  }
 
   form > *:first-child { margin-bottom: 1em; }
   form > *:nth-child(2) { margin-bottom: 1.5em; }
@@ -9,7 +12,7 @@
     display: block;
     margin-bottom: 2.5em;
     color: #fff;
-    font-size: var(--h2-font-size);
+    font-size: calc(var(--h2-font-size) - .5em);
     font-family: var(--font-title);
     text-align: center;
     letter-spacing: var(--letter-spacing);

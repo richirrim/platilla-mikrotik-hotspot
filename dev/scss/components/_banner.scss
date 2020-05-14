@@ -4,12 +4,14 @@
 .main-banner {
   position: relative;
   padding: 2em 1em;
+  @include from(medium) {
+    padding: 2em 3em;
+  }
   background-color: var(--color-primary);
   border-radius: 1em;
   overflow: hidden;
   box-shadow: $shadow;
   div.l-container {}
-  .container { position: relative; }
   &__hero-image {
     position: absolute;
     top: 0;
@@ -20,13 +22,50 @@
     object-fit: cover;
     object-position: center;
   }
-  .content-text {
-    text-align: center;
+  .container { position: relative; }
+  &__grid {
+    max-width: 24em;
+    margin-left: auto;
+    margin-right: auto;
 
+    @include from(medium) {
+      display: flex;
+      max-width: initial;
+      margin-left: initial;
+      margin-right: initial;
+      width: 100%;
+    }
+  }
+  .content-text {
+    @include from(medium) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-basis: 60%;
+    }
+    
+    text-align: center;
     @extend %text-white;
   }
-  &__title {}
-  &__description {
-    margin-bottom: 2em;
+  div.form {
+    @include from(medium) {
+      flex-basis: 40%;
+    }
+  }
+  &__title {
+    @include from(medium) {
+      text-align: left;
+      margin: 0;
+      margin-bottom: 1em;
+      width: 50%;
+    }
+  }
+  &__description { 
+    margin-bottom: 2em; 
+    @include from(medium) {
+      text-align: left;
+      margin: 0;
+      width: 22em;
+    }
   }
 }
