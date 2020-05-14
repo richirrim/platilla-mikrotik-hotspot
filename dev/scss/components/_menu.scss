@@ -4,7 +4,22 @@
   left: -100%;
   bottom: 0;
   background-color: var(--color-text2);
-  width: 80vw;
+  width: 70vw;
+  @include from(400px) {
+    width: 72vw;
+  }
+  @include from(440px) {
+    width: 75vw;
+  }
+  @include from(500px) {
+    width: 78vw;
+  }
+  @include from(540px) {
+    width: 81vw;
+  }
+  @include from(640px) {
+    width: 84vw;
+  }
   transition: left .3s;
   z-index: var(--z-tooltip);
 
