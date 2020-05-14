@@ -18,6 +18,7 @@ const paths = {
   rootServer: './public',
   rootPug: './dev/pug',
   html: {
+    watch: './dev/pug/**/*.pug',
     src: './dev/pug/pages/**/*.pug',
     dest: './public/'
   },
@@ -130,7 +131,7 @@ function startServer () {
 }
 
 function watchFiles () {
-  watch(paths.html.src, pugDev)
+  watch(paths.html.watch, pugDev)
   watch(paths.styles.src, sassDev)
   watch(paths.scripts.srcMultipleFiles, scripts)
   watch(paths.images.src, imagesDev)
