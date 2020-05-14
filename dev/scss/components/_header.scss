@@ -2,22 +2,27 @@
   cursor: pointer;
 }
 .main-header {
-  position: fixed;
+  border-radius: 5em;
+  margin-bottom: 1.5em;
   padding-left: 1em;
   padding-right: 1em;
   background-color: var(--color-primary);
   width: 100%;
   height: $header-height;
   box-shadow: $shadow;
-  z-index: var(--z-tooltip);
   
-  div.l-container {}
+  div.l-container { 
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
   &__block {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    @include from(medium) {
+      width: initial;
+    }
   }
   .logo {
     width: 4em;
@@ -36,6 +41,9 @@
     transition: all .3s;
     @extend %cursor-pointer;
     &:active { transform: scale(.90);}
+    @include from(medium) {
+      display: none;
+    }
   }
 }
 

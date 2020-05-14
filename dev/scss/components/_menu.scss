@@ -1,13 +1,22 @@
 .main-nav {
   position: fixed;
-  top: $header-height;
+  top: 0;
   left: -100%;
   bottom: 0;
   background-color: var(--color-text2);
-  width: 90vw;
+  width: 80vw;
   transition: left .3s;
+  z-index: var(--z-tooltip);
 
   &.show { left: 0; }
+
+  @include from(medium) {
+    position: initial;
+    top: initial;
+    left: 0;
+    background-color: initial;
+    width: initial;
+  }
 }
 
 .menu {
@@ -15,10 +24,16 @@
   margin-bottom: 0;
   padding-left: 0;
   padding-top: $header-height;
+  @include from (medium) {
+    display: flex;
+    padding-top: initial;
+    height: 100%;
+  }
   
   &__item { list-style-type: none; }
   &__link {
-    display: block;
+    // outline: 1px solid tomato;
+    display: flex;
     padding-left: 2em;
     padding-top: 1.5em;
     padding-bottom: 1.5em;
@@ -30,6 +45,32 @@
       color: var(--color-accent);
       background-color: var(--color-text);
       text-decoration: underline;
+    }
+    @include from(medium) {
+      position: relative;
+      align-items: center;
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-top: initial;
+      padding-bottom: initial;
+      color: var(--color-white);
+      height: 100%;
+
+      &:hover {
+        color: var(--color-accent);
+        background-color: initial;
+        text-decoration: none;
+      }
+      &:hover:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        border-radius: .5em;
+        bottom: 0;
+        width: 100%;
+        height: .25em;
+        background-color: var(--color-accent);
+      }
     }
   }
 }
