@@ -1,12 +1,11 @@
 // -------------- section about us ------------- 
 section.about-us.l-section
   div.l-container
-    div.container-subtitle
-      h2.about-us__subtitle#aboutUs= `${'Nosotros'.toUpperCase()}`
     div.container-image
       img.about-us__image(src="/images/section-about-us.svg", alt="Imagen de la sección Nosotros")
     
     div.about-us__content
+      h2.about-us__subtitle#aboutUs= `${'Nosotros'.toUpperCase()}`
       div.about-us__text
         p 
           span.strong INOUTI SOLUCIONES TI 
@@ -26,7 +25,6 @@ section.about-us.l-section
           | INOUTI ofrece estamos firmemente comprometidos con brindarle 
           | un servicio óptimo y de calidad, de acuerdo a las necesidades 
           | de su organización.
-
       div.about-us__contact
         +buttonContact('button-whatsapp', 'icon-whatsapp', '9811234567')
         +buttonContact('button-gmail', 'icon-gmail', 'inoutisolucionesti@gmail.com')

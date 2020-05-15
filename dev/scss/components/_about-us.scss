@@ -2,54 +2,79 @@
     $About us
 \--------------------------*/
 .about-us {
-  flex-direction: column;
-  // flex-wrap: wrap; // Desktop style.
+  position: relative;
   text-align: center;
   
-  // & > * { outline: .25em dotted tomato; } // test
+  div.l-container {
+    max-width: 40rem;
 
-  .container-subtitle {
-    // Deskto style.
-    // display: flex;
-    // justify-content: flex-end;
-    // width: 100%;
-    width: 100%;
-
-  }
-    &__subtitle {
-      // Dektop style.
-      // text-align: initial; 
-      // width: 60%;
-      margin-top: 0;
-      margin-bottom: 1em;
-      color: var(--color-primary);
+    @include from(large) {
+      display: flex;
+      max-width: $max-width;
     }
+  }
+  &__subtitle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 0;
+    margin-bottom: 1em;
+    color: var(--color-primary);
+    
+    @include from(large) {
+      position: initial;
+      text-align: initial; 
+    }
+  }
   
   .container-image {
     width: 100%;
-    // Desktop style.
-    // display: flex;
-    // flex-basis: 40%;
+    padding-top: calc(var(--h2-font-size) + 2em); // hack
+
+    @include from(large) {
+      display: flex;
+      flex-basis: 40%;
+      padding-top: 0;
+    }
   }
     &__image { 
       width: 24em;
       margin-left: auto;
       margin-right: auto;
-      // margin: auto; // Dektop style.
       margin-bottom: 2.5em;
+      @include from(large) {
+        margin: auto;
+      }
     }
 
   &__content {
-    // flex-basis: 60%; // Desktop style
+    @include from(large) {
+      --margin: 1.5em;
+      flex-basis: calc(60% - var(--margin));
+      margin-left: var(--margin);
+    }
   }
     &__text {
-      // text-align: initial; // Desktop style.
       margin-bottom: 2.5em;
+      p { margin-top: 0; }
+      p:last-child { margin-bottom: 0; }
       .strong { font-weight: 500; }
+      @include from(large) {
+        text-align: initial;
+      }
     }
     &__contact {
-      button:first-child {
-        margin-bottom: 1em;
+      margin-left: auto;
+      margin-right: auto;
+      button:first-child { margin-bottom: 1em; }
+
+      @include from(medium) {
+        display: flex;
+        button:first-child { 
+          margin-right: 1em;
+          margin-bottom: 0; 
+        }
       }
     }
 }
