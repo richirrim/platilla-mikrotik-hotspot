@@ -1,6 +1,6 @@
 .glide {  
   &__track {}
-  &__slides {} // este elemento pone el margin que separa los bottones.
+  &__slides {}
     &__slide { height: initial !important; }
   &__arrows { 
     display: flex;
