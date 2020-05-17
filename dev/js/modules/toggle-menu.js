@@ -5,12 +5,12 @@
  * @param {string} idNav 
  */
 export const toggleMenu = function (idIconMenu, idNav) {
+  const navEl = document.getElementById(idNav)
   const toggelEl = document.getElementById(idIconMenu)
-  const menuEl = document.getElementById(idNav)
   
-  if (!(toggleMenu && menuEl)) return
+  if (!(toggelEl && navEl)) return
   
   toggelEl.addEventListener('click', () => {
-    menuEl.classList.toggle('show')
+    navEl.classList.toggle('showNav')
   })
 }

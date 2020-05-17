@@ -10,6 +10,7 @@
     @content;
     color: $color;
     background-image: url($pathIcon);
+    background-repeat: no-repeat;
     filter: $color;
   }
 }
