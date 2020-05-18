@@ -22,8 +22,10 @@ Cada vez que se haga un cambio al proyecto en este repositorio, deberás bajarlo
 * Abre un terminal **(cmd, windows bash (wsl))** en la ruta que desees guardar el proyecto.
 * Esribe el siguiente comando para descargar el proyecto **(clonarlo en tú pc)**: `git clone url-del-repositorio-github`
 * Escribe el siguiente comando para instalar gulp globalmente **(gulp es muy importante, permitira automatizar tareas que tendrias que hacer manualmente cada vez que trabajes en el proyecto**: `npm install -g gulp-cli`
-* Escribe el siguiente comando en la terminal (importante tener actualizado node y npm), **el sig. comando descargará los paquetes necesarios para el correcto funcionamiento del proyecto**: `npm install` 
+*  **El sig. comando descargará los paquetes necesarios para el correcto funcionamiento del proyecto**: `npm install` 
 * Escribe el siguiente comando para trabajar en desarrollo **(Al ejecutar el comandor veras como se abre el proyecto en tu navegador)**: `gulp dev`
 * Escribe `gulp production` cuando necesites subir el proyecto al server en producción.
+
+**Nota**: La terminal siempre debe apuntar a la ubicación del proyecto para ejecutar correctamente los comandos anteriores.
 
 ![image preview](https://repository-images.githubusercontent.com/258600299/54d61a00-9912-11ea-9313-87a6b04cff94)
