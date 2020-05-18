@@ -141,4 +141,4 @@ function watchFiles () {
 }
 
 exports.dev = parallel(startServer, imagesDev, watchFiles, series(sassDev, pugDev, scripts)) // tasks dev.
-exports.prod = series(images, sassBuild, pugBuild, scripts) // tasks production.
+exports.production = series(images, sassBuild, pugBuild, scripts) // tasks production.
