@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>INOUTI | Login Hotspot</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <meta name="description" content="Plantilla para Mikrotik | Hotspot by INOUTI 🧡">
+    <meta name="theme-color" content="#FF9800">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.png"><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="icon" href="images/logo-white.png">
+  </head>
+  <body>
+    <!-- ----------- main headers -----------  -->
+    <header class="main-header l-section l-container">
+      <div class="main-header__block"><img class="logo" src="/images/logo-white.png" alt="Logo de la página">
+        <div class="icon-menu" id="js-icon-menu-open"></div>
+      </div>
+      <!-- ------------ main nav ------------------- -->
+      <nav class="main-nav" id="js-nav">
+        <ul class="menu" id="js-menu">
+          <div class="icon-menu-close" id="js-icon-menu-close"></div>
+          <li class="menu__item"><a class="menu__link" href="/">Inicio</a></li>
+          <li class="menu__item"><a class="menu__link" href="#aboutUs">Nosotros</a></li>
+          <li class="menu__item"><a class="menu__link" href="#services">Servicios</a></li>
+          <li class="menu__item"><a class="menu__link" href="#adsBusiness">Ver otros negocios</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- ----------- main -----------  -->
+    <main class="main">
+      <!-- ------------ banner ----------- -->
+      <section class="main-banner l-section l-container"><img class="main-banner__hero-image" src="/images/banner-image.jpg" alt="Banner principal"/>
+        <div class="main-banner__grid container">
+          <div class="content-text">
+            <h1 class="main-banner__title">INOUTI</h1>
+            <p class="main-banner__description">Empresa de tecnología 100% campechana, brindamos respuestas integrales acorde a sus necesidades. Tenemos como objetivo ofrecer soluciones informáticas, dando un diagnóstico preciso y atención personalizada.</p>
+          </div>
+          <!-- ------------ form ------------ -->
+          <div class="form"><span class="form__title">HOTSPOT LOGIN</span>
+            <form method="POST">
+              <div class="form__input">
+                <div class="icon icon-user"></div>
+                <input class="input" id="js-inputName" type="text" placeholder="Escribe tu nombre de usuario" name="userName" required="required"/>
+              </div>
+              <div class="form__input">
+                <div class="icon icon-pass"></div>
+                <input class="input" id="js-inputPass" type="password" placeholder="Escribe tu contraseña" name="userPass" required="required"/>
+              </div>
+              <input class="button-primary" type="submit" value="Activar internet"/>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- -------------- section about us ------------- -->
+      <section class="about-us l-section">
+        <div class="l-container">
+          <div class="container-image"><img class="about-us__image" src="images/section-about-us.svg" alt="Imagen de la sección Nosotros"></div>
+          <div class="about-us__content">
+            <h2 class="about-us__subtitle" id="aboutUs">NOSOTROS</h2>
+            <div class="about-us__text">
+              <p> <span class="strong">INOUTI SOLUCIONES TI </span>es una empresa inmersa en el mundo 
+                de la tecnología, que mejora y optimiza los recursos TI 
+                de pequeñas y medianas empresas. Ayudándolas a 
+                incorporase a la era digital que estamos viviendo en la 
+                actualidad.
+              </p>
+              <p>
+                Proporcionamos servicios relacionados con las tecnologías 
+                de la información: Mantenimiento preventivo y correctivo 
+                de equipos informáticos, instalación de redes de área 
+                local y desarrollo web.
+              </p>
+              <p>
+                Nuestros servicios están enfocados en mejorar la calidad
+                y rentabilidad de nuestros clientes. En cada servicio que 
+                INOUTI ofrece estamos firmemente comprometidos con brindarle 
+                un servicio óptimo y de calidad, de acuerdo a las necesidades 
+                de su organización.
+              </p>
+            </div>
+            <div class="about-us__contact">
+              <button class="button-whatsapp  icon-whatsapp" id="js-btnContact" type="button">9811234567</button>
+              <button class="button-gmail  icon-gmail" id="js-btnContact" type="button">inoutisolucionesti@gmail.com</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ------------ Section services ---------------- -->
+      <section class="services  l-section">
+        <div class="l-container">
+          <h2 class="services__subtitle  center-content" id="services">SERVICIOS</h2>
+          <!-- ------------- glide js ----------------->
+          <div class="glide" id="js-glide-services">
+            <!-- ------- glide items ----------------- -->
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide">
+                  <div class="card-services  b-shadow" id="js-card-service"><img class="card-services__image" src="images/section-service-software.svg" alt="Imagen, servicios de soporte a usuarios y equipos."/>
+                    <h3 class="card-services__subtitle">Soporte a usuarios y equipos</h3>
+                    <p class="card-services__text" id="js-text0">Incidencias relacionadas con problemas de configuración, bloqueo, mal funcionamiento del sistema operativo (Windows), aplicaciones, correo electrónico, navegadores, sistemas antivirus, etc.</p>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="card-services  b-shadow" id="js-card-service"><img class="card-services__image" src="images/section-service-hardware.svg" alt="Imagen, servicios de soporte a usuarios y equipos."/>
+                    <h3 class="card-services__subtitle">Mantenimiento del equipo de cómputo</h3>
+                    <p class="card-services__text" id="js-text1">Ofrecemos un plan de mantenimiento preventivo y soporte correctivo de sus computadoras, servidores, impresoras etc.</p>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="card-services  b-shadow" id="js-card-service"><img class="card-services__image" src="images/section-service-code.svg" alt="Imagen, servicios de soporte a usuarios y equipos."/>
+                    <h3 class="card-services__subtitle">Diseño y desarrollo web</h3>
+                    <p class="card-services__text" id="js-text2">Diseño y construcción de sitios web con un &quot;look and feel&quot; genérico y exclusivo para su empresa.</p>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="card-services  b-shadow" id="js-card-service"><img class="card-services__image" src="images/section-service-red.svg" alt="Imagen, servicios de soporte a usuarios y equipos."/>
+                    <h3 class="card-services__subtitle">Instalación de redes LAN</h3>
+                    <p class="card-services__text" id="js-text3">Instalación de cableado con presupuesto exclusivo para su empresa.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- ---------- glide controls --------------- -->
+            <div class="glide__arrows" data-glide-el="controls">
+              <button class="glide__arrow  glide__arrow--left button  icon-arrow-left" data-glide-dir="&lt;" type="button"></button>
+              <button class="glide__arrow  glide__arrow--right  button  icon-arrow-right" data-glide-dir="&gt;" type="button"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ------------- section business ---------------- -->
+      <section class="business l-section">
+        <div class="l-container">
+          <h2 class="business__subtitle  center-content" id="adsBusiness">OTROS NEGOCIOS (EXAMPLE ADS)</h2>
+          <!-- ------------- glide js ----------------->
+          <div class="glide" id="js-glide-business">
+            <!-- ------- glide items ----------------- -->
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide">
+                  <div class="card-business" id="js-card-business">
+                    <div class="card-business__head">
+                      <div class="card-business__container-icon b-shadow"><img class="card-business__icon" src="images/logo-business-money.png" alt="logo del negocio"/></div>
+                      <h3 class="card-business__subtitle">Item 1</h3>
+                    </div>
+                    <p class="card-business__text" id="js-business0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe qui in quas nam, magni porro itaque quam laboriosam quos architecto sed voluptates quia cum eveniet minima quis suscipit repellendus sunt!</p>
+                    <button class="button-mail  icon-mail" id="js-btnContact" type="button">twitch.ipsum@gmail.com</button>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="card-business" id="js-card-business">
+                    <div class="card-business__head">
+                      <div class="card-business__container-icon b-shadow"><img class="card-business__icon" src="images/logo-business-puer.png" alt="logo del negocio"/></div>
+                      <h3 class="card-business__subtitle">Item 2</h3>
+                    </div>
+                    <p class="card-business__text" id="js-business1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maiores alias saepe possimus neque qui ad eius in aliquid voluptates cupiditate, eveniet molestiae illum dignissimos. Odio consequuntur dolor ipsam iure.</p>
+                    <button class="button-whatsapp  icon-whatsapp" id="js-btnContact" type="button">+52 981 432 2145</button>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="card-business" id="js-card-business">
+                    <div class="card-business__head">
+                      <div class="card-business__container-icon b-shadow"><img class="card-business__icon" src="images/logo-business-money.png" alt="logo del negocio"/></div>
+                      <h3 class="card-business__subtitle">Item 3</h3>
+                    </div>
+                    <p class="card-business__text" id="js-business2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maiores alias saepe possimus neque qui ad eius in aliquid voluptates cupiditate, eveniet molestiae illum dignissimos. Odio consequuntur dolor ipsam iure.</p>
+                    <button class="button-facebook  icon-facebook" id="js-btnContact" type="button">@linkedin</button>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="card-business" id="js-card-business">
+                    <div class="card-business__head">
+                      <div class="card-business__container-icon b-shadow"><img class="card-business__icon" src="images/logo-business-puer.png" alt="logo del negocio"/></div>
+                      <h3 class="card-business__subtitle">item 4</h3>
+                    </div>
+                    <p class="card-business__text" id="js-business3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maiores alias saepe possimus.</p>
+                    <button class="button-gmail  icon-gmail" id="js-btnContact" type="button">item-4@gmail.com</button>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="card-business" id="js-card-business">
+                    <div class="card-business__head">
+                      <div class="card-business__container-icon b-shadow"><img class="card-business__icon" src="images/logo-business-money.png" alt="logo del negocio"/></div>
+                      <h3 class="card-business__subtitle">item 5</h3>
+                    </div>
+                    <p class="card-business__text" id="js-business4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maiores alias saepe possimus. Atque maiores alias saepe possimus.</p>
+                    <button class="button-mail  icon-mail" id="js-btnContact" type="button">item-5@hotmail.com</button>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="card-business" id="js-card-business">
+                    <div class="card-business__head">
+                      <div class="card-business__container-icon b-shadow"><img class="card-business__icon" src="images/logo-business-puer.png" alt="logo del negocio"/></div>
+                      <h3 class="card-business__subtitle">item 6</h3>
+                    </div>
+                    <p class="card-business__text" id="js-business5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque maiores alias saepe possimus. Atque maiores alias saepe possimus. Atque maiores alias saepe possimus.</p>
+                    <button class="button-whatsapp  icon-whatsapp" id="js-btnContact" type="button">+52 981 123 3467</button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- ---------- glide controls --------------- -->
+            <div class="glide__arrows" data-glide-el="controls">
+              <button class="glide__arrow  glide__arrow--left button  icon-arrow-left" data-glide-dir="&lt;" type="button"></button>
+              <button class="glide__arrow  glide__arrow--right  button  icon-arrow-right" data-glide-dir="&gt;" type="button"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ----------- main footer -----------  -->
+    <footer class="main-footer l-section shadow">
+      <div class="l-container">
+        <div class="container center-content">
+          <h2 class="main-footer__subtitle  center-content">SOPORTE INOUTI</h2>
+          <div class="main-footer__contact">
+            <h3>CONTACTANOS</h3>
+            <button class="button-social-secondary  icon-whatsapp-white" id="js-btnContact" type="button">+52 981 234 5678</button>
+            <button class="button-social-secondary  icon-mail-white" id="js-btnContact" type="button">inoutisolucionesti@gmail.com</button>
+          </div>
+          <div class="main-footer__socialnetworks">
+            <h3>EN REDES</h3>
+            <button class="button-social-secondary  icon-facebook-white" id="js-btnContact" type="button">@inoutisoluciones</button>
+          </div>
+          <div class="main-footer__services"> 
+            <h3>NUESTROS SERVICIOS</h3>
+            <ul class="center-content">
+              <li>✅ Soporte a usuarios y equipos.</li>
+              <li>✅ Mantenimiento del equipo de cómputo.</li>
+              <li>✅ Diseño y desarrollo Web.</li>
+              <li>✅ Instalación de redes LAN.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="main-footer__credits  center-content">
+        <p>Made with ❤ by INOUTI</p>
+      </div>
+    </footer>
+    <script src="js/clamp.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  </body>
+</html>

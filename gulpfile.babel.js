@@ -15,25 +15,25 @@ const server = browserSync.create()
 sass.compiler = require('node-sass')
 
 const paths = {
-  rootServer: './public',
+  rootServer: './docs', // ./public
   rootPug: './dev/pug',
   html: {
     watch: './dev/pug/**/*.pug',
     src: './dev/pug/pages/**/*.pug',
-    dest: './public/'
+    dest: './docs/'
   },
   styles: {
     src: './dev/scss/**/*.scss',
-    dest: './public/css/'
+    dest: './docs/css/'
   },
   scripts: {
     srcMultipleFiles: './dev/js/**/*.js',
     srcSingleFile: './dev/js/index.js',
-    dest: './public/js/'
+    dest: './docs/js/'
   },
   images: {
     src: './dev/images/**/**',
-    dest: './public/images/'
+    dest: './docs/images/'
   }
 };
 
