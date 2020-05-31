@@ -2,21 +2,24 @@ mixin form(title, buttonText, inputInfo)
   // ------------ form ------------ 
   .form
     //- ------- Title form ---------------  
-    span(class="form__title")= `${title.toUpperCase()}`
-    form(method="POST")
-      each input in  inputInfo
-        div(class="form__input")
-          div.icon.icon-user
-          input(class="input" 
-            id=input.id 
-            type=`${input.itype ? input.itype : 'text'}` 
-            placeholder=input.placeholder 
-            name=input.name 
-            required)
-
-      div(class="form__input  form__input--hidden")
+    span(class="form__title")= `${title ? title.toUpperCase() : 'Default title'}`
+    if inputInfo.length > 0
+      form(method="POST")
+        each input in  inputInfo
+          div(class="form__input")
+            div.icon.icon-user
+            input(class="input" 
+              id=input.id 
+              type=`${input.itype ? input.itype : 'text'}` 
+              placeholder=input.placeholder 
+              name=input.name 
+              required)
+    
+        div(class="form__input  form__input--hidden")
           input()
-      div(class="form__input  form__input--hidden")
+        div(class="form__input  form__input--hidden")
           input()
-      input(class="button-primary" type="submit", value=buttonText)
+        input(class="button-primary" type="submit", value=`${buttonText ? buttonText : 'Default text'}`)
+    else    
+      p.center-content(style="color: tomato") ⚠ Array empty
 
