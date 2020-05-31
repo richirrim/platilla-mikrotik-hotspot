@@ -1,13 +1,22 @@
-mixin form(title, UserPlaceholderText, PassPlaceholderText, buttonText)
+mixin form(title, buttonText, inputInfo)
   // ------------ form ------------ 
   .form
+    //- ------- Title form ---------------  
     span(class="form__title")= `${title.toUpperCase()}`
     form(method="POST")
-      div(class="form__input")
-        div.icon.icon-user
-        input(class="input" id="js-inputName" type="text" placeholder=UserPlaceholderText name="userName" required)
-      div(class="form__input")
-        div.icon.icon-pass
-        input(class="input" id="js-inputPass" type="password" placeholder=PassPlaceholderText name="userPass" required)
+      each input in  inputInfo
+        div(class="form__input")
+          div.icon.icon-user
+          input(class="input" 
+            id=input.id 
+            type=`${input.itype ? input.itype : 'text'}` 
+            placeholder=input.placeholder 
+            name=input.name 
+            required)
+
+      div(class="form__input  form__input--hidden")
+          input()
+      div(class="form__input  form__input--hidden")
+          input()
       input(class="button-primary" type="submit", value=buttonText)
 

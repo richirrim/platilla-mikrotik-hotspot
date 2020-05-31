@@ -2,12 +2,9 @@
   border-radius: .5em;
   background-color: var(--color-text);
   padding: 2.5em 1.5em;
-  @include from(medium) {
-    padding: 5.5em 2em;
-  }
+  @include from(medium) { padding: 5.5em 2em; }
 
-  form > *:first-child { margin-bottom: 1em; }
-  form > *:nth-child(2) { margin-bottom: 1.5em; }
+  form > *:not(:last-child) { margin-bottom: 1em; }
   &__title {
     display: block;
     margin-bottom: 2.5em;
@@ -29,6 +26,7 @@
     }
     input { 
       border: none;
+      outline: none;
       background: transparent;
       padding-left: 1em;
       padding-right: 1em;
@@ -39,6 +37,10 @@
         color: var(--color-text); 
         opacity: .4;
       }
+    }
+    &--hidden {
+      display: none;
+      input { padding-left: 0; }
     }
   }
 }
