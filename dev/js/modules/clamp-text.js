@@ -1,4 +1,4 @@
-
+import clamp from '../clamp'
 /**
  * function: addClampSingleElement()
  * 
