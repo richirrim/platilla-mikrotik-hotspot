@@ -5,7 +5,7 @@
 Cada vez que se haga un cambio al proyecto en este repositorio, deberás bajarlos a tu máquina local (tú PC) para así obtener la última versión del proyecto y mantener siempre actualizado el proyecto en tú máquina para no tener problemas en el futuro.
 
 **El siguiente comando descargara los cambios y actulizara el proyecto que se encuentra en tu PC:**
-* Abrer un terminal en la ubicación del proyecto y escribe: `git pull` 
+* Abrir la terminal en la ubicación del proyecto y escribir: `git pull` 
 
 
 ## Descargando el proyecto a tú máquina local
@@ -21,9 +21,11 @@ Cada vez que se haga un cambio al proyecto en este repositorio, deberás bajarlo
 **2. Pasos para instalar el proyecto en tú PC:**
 * Abre un terminal **(cmd, windows bash (wsl))** en la ruta que desees guardar el proyecto.
 * Esribe el siguiente comando para descargar el proyecto **(clonarlo en tú pc)**: `git clone url-del-repositorio-github`
-* Escribe el siguiente comando para instalar gulp globalmente **(gulp es muy importante,  descargará los paquetes necesarios para el correcto funcionamiento del proyecto)**: `npm install -g gulp-cli`
-* Escribe el siguiente comando en la terminal (importante tener actualizado node y npm): `npm install` 
+* Escribe el siguiente comando para instalar gulp globalmente **(gulp es muy importante, permitira automatizar tareas que tendrias que hacer manualmente cada vez que trabajes en el proyecto**: `npm install -g gulp-cli`
+*  **El sig. comando descargará los paquetes necesarios para el correcto funcionamiento del proyecto**: `npm install` 
 * Escribe el siguiente comando para trabajar en desarrollo **(Al ejecutar el comandor veras como se abre el proyecto en tu navegador)**: `gulp dev`
 * Escribe `gulp production` cuando necesites subir el proyecto al server en producción.
+
+**Nota**: La terminal siempre debe apuntar a la ubicación del proyecto para ejecutar correctamente los comandos anteriores.
 
 ![image preview](https://repository-images.githubusercontent.com/258600299/54d61a00-9912-11ea-9313-87a6b04cff94)
