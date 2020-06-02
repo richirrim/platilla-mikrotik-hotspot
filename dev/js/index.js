@@ -6,8 +6,8 @@ import { glide } from './modules/glide'
 const mediumBP = matchMedia('(min-width: 768px)')
 
 glide('js-glide-business')
-toggleMenu('js-icon-menu-open', 'js-nav')
-toggleMenu('js-icon-menu-close', 'js-nav')
+toggleMenu('js-menu-open', 'js-nav')
+toggleMenu('js-menu-close', 'js-nav')
 addClampMultipleElements('.card-services__text', '#js-card-service')
 addClampMultipleElements('.card-business__text', '#js-card-business')
 phoneNumberValidation()

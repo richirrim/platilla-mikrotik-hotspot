@@ -1,5 +1,5 @@
-ul.menu#js-menu()
-  div(class="icon-menu-close" id="js-icon-menu-close")
+ul(class="menu" id="js-menu-close")
+  div(class="icon-menu-close" id="js-icon-close")
   each page in pages
     li.menu__item
       a.menu__link(href=page.url)= page.title
