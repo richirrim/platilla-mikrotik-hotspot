@@ -13,22 +13,20 @@
     font-family: var(--font-title);
     letter-spacing: var(--letter-spacing);
   }
-  .text {
-    margin-top: 2em;
-    color: var(--color-primary);
-  }
+  .text { color: var(--color-primary); }
 }
 
 
 .form {
   > *:not(:last-child) { margin-bottom: 1em; }
+  
   &__input {
     display: flex;
     border-radius: .5em;
     background-color: var(--color-bg);
     overflow: hidden;
 
-    div.icon {
+    .icon {
       padding: 1em 1em;
       background-color: var(--color-text2);
     }
@@ -51,4 +49,5 @@
       input { padding-left: 0; }
     }
   }
+  input[type=submit] { margin-bottom: 2em; }
 }
