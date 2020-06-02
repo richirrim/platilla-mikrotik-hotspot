@@ -47,7 +47,7 @@
     text-align: center;
     @extend %text-white;
   }
-  div.form {
+  .form-container {
     @include from(medium) {
       flex-basis: 40%;
     }
