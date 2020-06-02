@@ -34,6 +34,10 @@ const paths = {
   images: {
     src: './dev/images/**/**',
     dest: './public/images/'
+  },
+  fonts: {
+    src: './dev/fonts/**/**',
+    dest: './public/fonts/'
   }
 };
 
@@ -122,6 +126,12 @@ const imagesDev = function () {
     .pipe(dest(paths.images.dest))
 }
 
+const fonts = function () {
+  /** Tarea para desarrollo y tambíen para producción */
+  return src(paths.fonts.src)
+    .pipe(dest(paths.fonts.dest))
+}
+
 function startServer () {
   server.init({
     server: { 
@@ -135,10 +145,11 @@ function watchFiles () {
   watch(paths.styles.src, sassDev)
   watch(paths.scripts.srcMultipleFiles, scripts)
   watch(paths.images.src, imagesDev)
+  watch(paths.fonts.src, fonts)
   
   watch(paths.html.dest).on('change', server.reload)
   watch(paths.scripts.dest).on('change', server.reload)
 }
 
-exports.dev = parallel(startServer, imagesDev, watchFiles, series(sassDev, pugDev, scripts)) // tasks dev.
-exports.production = series(images, sassBuild, pugBuild, scripts) // tasks production.
+exports.dev = parallel(startServer, fonts, imagesDev, watchFiles, series(sassDev, pugDev, scripts)) // tasks dev.
+exports.production = series(fonts, images, sassBuild, pugBuild, scripts) // tasks production.
