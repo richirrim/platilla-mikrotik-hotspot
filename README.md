@@ -4,8 +4,8 @@
 
 Cada vez que se haga un cambio al proyecto en este repositorio, deberás bajarlos a tu máquina local (tú PC) para así obtener la última versión del proyecto y mantener siempre actualizado el proyecto en tú máquina para no tener problemas en el futuro.
 
-**El siguiente comando descargara los cambios y actulizara el proyecto que se encuentra en tu PC:**
-* Abrir la terminal en la ubicación del proyecto y escribir: `git pull` 
+* Abrir la terminal en la ubicación del proyecto y escribir: `git pull`
+* Actualiza las dependencias en el package.json: `npm install`
 
 
 ## Descargando el proyecto a tú máquina local
