@@ -1,13 +1,15 @@
 mixin form(title, buttonText, inputInfo)
   // ------------ form ------------ 
-  .form
+  .form-container
     //- ------- Title form ---------------  
-    span(class="form__title")= `${title ? title.toUpperCase() : 'Default title'}`
+    span(class="title  center-content")= `${title ? title.toUpperCase() : 'Default title'}`
+    
     if inputInfo.length > 0
-      form(method="POST")
+      //- -------------------- form --------------  
+      form.form(method="POST")
         each input in  inputInfo
           div(class="form__input")
-            div.icon.icon-user
+            div(class=`icon  ${input.icon}`)
             input(class="input" 
               id=input.id 
               type=`${input.itype ? input.itype : 'text'}` 
@@ -22,4 +24,4 @@ mixin form(title, buttonText, inputInfo)
         input(class="button-primary" type="submit", value=`${buttonText ? buttonText : 'Default text'}`)
     else    
       p.center-content(style="color: tomato") ⚠ Array empty
-
+    p.text.center-content Text random
