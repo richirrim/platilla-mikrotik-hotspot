@@ -1,0 +1,9 @@
+mixin banner(image, title, description)
+  // ------------ banner ----------- 
+  section.main-banner.l-section.l-container
+    img(class="main-banner__hero-image" src=image alt="Banner principal")
+    .main-banner__grid.container
+      .content-text
+        h1(class="main-banner__title")= title.toUpperCase()
+        p(class="main-banner__description")= description
+      block
