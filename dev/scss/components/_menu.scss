@@ -71,10 +71,11 @@
       text-decoration: underline;
     }
     @include from(medium) {
+      --padding: .5em;
       position: relative;
       align-items: center;
-      padding-left: .5em;
-      padding-right: .5em;
+      padding-left: var(--padding);
+      padding-right: var(--padding);
       padding-top: initial;
       padding-bottom: initial;
       color: var(--color-white);
@@ -95,6 +96,9 @@
         height: .25em;
         background-color: var(--color-accent);
       }
+    }
+    @include from(1000px) {
+      --padding: 1em;
     }
   }
 }
