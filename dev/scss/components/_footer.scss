@@ -35,6 +35,8 @@
   }
   &__services {
     width: 100%;
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing);
     ul {
       margin-top: 0;
       margin-bottom: 0;
@@ -49,6 +51,7 @@
     @include from(large) { flex-basis: 33.333333333333336%; }
   }
   &__credits {
+    text-transform: uppercase;
     background-color: var(--color-text2);
     p {
       margin: 0;
