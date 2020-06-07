@@ -3,7 +3,9 @@
  */
 import Glide from '@glidejs/glide' 
 
-export const glide = function (id, isActive = true) {
+export const glide = function (id) {
+  if (!id) return
+  
   const glideConfig = {
     element: document.getElementById(id),
     options: {
@@ -49,7 +51,5 @@ export const glide = function (id, isActive = true) {
     }
   }
   
-  const glideJs = new Glide(glideConfig.element, glideConfig.options).mount()
-  
-  if (!isActive) glideJs.disable() // Mata la interacción.
+  new Glide(glideConfig.element, glideConfig.options).mount()
 }

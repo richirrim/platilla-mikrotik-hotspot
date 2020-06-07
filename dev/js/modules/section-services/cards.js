@@ -56,4 +56,4 @@ const addCardsToIU = (data) => {
   $section.appendChild($div)
 }
 
-export { addCardsToIU }
+export { addCardsToIU, createCard }
