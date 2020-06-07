@@ -1,3 +1,10 @@
+/**
+ * Function: createCard()
+ * @param {number} id 
+ * @param {string} title 
+ * @param {string} text 
+ * @param {string} nameFile 
+ */
 const createCard = (id, title = 'Título', text = 'Description', nameFile) => {
   const $card = document.createElement('ARTICLE')
   $card.setAttribute('class', 'card-services  b-shadow')
@@ -13,6 +20,10 @@ const createCard = (id, title = 'Título', text = 'Description', nameFile) => {
   return $card
 }
 
+/**
+ * Function: addInfoToCard()
+ * @param {Array} data 
+ */
 const addInfoToCard = (data) => {
   const $contentFragment = document.createDocumentFragment()
   
@@ -24,6 +35,10 @@ const addInfoToCard = (data) => {
   return $contentFragment
 }
 
+/**
+ * Function: addCardsToIU()
+ * @param {Array} data 
+ */
 const addCardsToIU = (data) => {
   if (!(Array.isArray(data) && data.length > 0)) return // guard.
   const $cards = addInfoToCard(data)
