@@ -51,9 +51,7 @@ const toggleGlider = (mediumBP) => {
     addElementToIU('#js-services div', createGliderElement())
     addListCardToGlider(createListCards(servicesData))
     addClampMultipleElements('.card-services__text', '#js-card-service')
-    console.log('glider')
     glide('js-glide-services') // Activa la funcionalidad.
-    console.log('hola')
   }
   else {
     const $section = doc.querySelector('#js-services div')

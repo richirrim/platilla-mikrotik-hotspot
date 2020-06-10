@@ -37,7 +37,6 @@ const addClampSingleElement = function (id, numberLine) {
  */
 const addClampMultipleElements = function (elementClass, id) {
   const cards = Array.from(document.querySelectorAll(id))
-  console.log(cards)
   if (!(cards.length > 0)) return
 
   for (const card of cards) {
