@@ -1,8 +1,10 @@
 /**
- * function: toggleMenu()
+ * @param {string} idElement - String con el id del elemento que lanza el evento.
+ * @param {string} idNav  - Strin con el id del elemento que se desplegara.
  * 
- * @param {string} idElement 
- * @param {string} idNav 
+ * @return {void} - No devuelve nada.
+ * 
+ * @author Ricardo Ortega Chap <ricardoortega.dev@gmail.com>
  */
 export const toggleMenu = function (idElement, idNav) {
   const $navEl = document.getElementById(idNav)

@@ -1,13 +1,15 @@
 import clamp from '../clamp'
 /**
- * function: addClampSingleElement()
- * 
- * @param {string} id
- * @param {number} numberLine 
- * 
+ * @fileoverview
  * Limita un parrafo a las líneas que se decee mostrar (visualmente).
  * Por defecto, muestra 5 líneas la función. Esta función solo modifica
  * un elemento.
+ * @param {string} id
+ * @param {number} numberLine 
+ * 
+ * @return {void} - No devuelve nada.
+ * 
+ * @author Ricardo Ortega Chap <ricardoortega.dev@gmail.com>
  */
 const addClampSingleElement = function (id, numberLine) {
   // https://github.com/josephschmitt/Clamp.js
@@ -22,13 +24,20 @@ const addClampSingleElement = function (id, numberLine) {
 }
 
 /**
- * function: addClampMultipleElements()
- * 
+ * @fileoverview
  * Limita un parrafo a las líneas que se decee mostrar (visualmente).
  * Esta función modifica más de un elemento.
+ * 
+ * @param {string} elementClass 
+ * @param {string} id 
+ * 
+ * @return {void} - No devuelve nada.
+ * 
+ * @author Ricardo Ortega Chap <ricardoortega.dev@gmail.com>
  */
 const addClampMultipleElements = function (elementClass, id) {
   const cards = Array.from(document.querySelectorAll(id))
+  console.log(cards)
   if (!(cards.length > 0)) return
 
   for (const card of cards) {

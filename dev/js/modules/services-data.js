@@ -1,4 +1,4 @@
-export const data = [
+export const servicesData = [
   { 
     nameFile: 'software', 
     title: 'Soporte a usuarios y equipos', 

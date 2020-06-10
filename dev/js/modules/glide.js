@@ -3,9 +3,13 @@
  */
 import Glide from '@glidejs/glide' 
 
+/**
+ * 
+ * @param {string} id 
+ * 
+ * @return {void} - No devuelve nada.
+ */
 export const glide = function (id) {
-  if (!id) return
-  
   const glideConfig = {
     element: document.getElementById(id),
     options: {
