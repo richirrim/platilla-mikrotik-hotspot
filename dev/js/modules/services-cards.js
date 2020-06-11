@@ -21,6 +21,7 @@ const createCardElement = (id, title = 'Título', text = 'Description', nameFile
     id: 'js-card-service'
   })
 
+  // <img class="card-services__image" src='/images/section-service-${nameFile}-blue.svg' alt="Imagen, servicios de soporte a usuarios y equipos.">
   const contentElements = `
     <img class="card-services__image" src='/images/section-service-${nameFile}.svg' alt="Imagen, servicios de soporte a usuarios y equipos.">
     <h3 class="card-services__subtitle">${title}</h3>

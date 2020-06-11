@@ -7,7 +7,7 @@ $breakPoints: (
   large: 75em // 1200px
 );
 
-/* color palet */
+/* Brand color palette */
 :root {
   --color-primary: #FF9800;
   --color-second: #EF6C00;
@@ -17,7 +17,6 @@ $breakPoints: (
   --color-bg: #FFF3E0;
   --color-white: #FAFAFA;
 }
-
 $color-primary: #FF9800;
 $color-second: #EF6C00;
 $color-accent: #2962FF;
@@ -25,6 +24,25 @@ $color-text: #263238;
 $color-text2: #1D272C;
 $color-bg: #FFF3E0;
 $color-white: #FAFAFA;
+
+
+/* template default color blue */
+// :root {
+//   --color-primary: #2196F3;
+//   --color-second: #0277BD;
+//   --color-accent: #2962FF;
+//   --color-text: #263238;
+//   --color-text2: #1D272C;
+//   --color-bg: #B3E5FC;
+//   --color-white: #FAFAFA;
+// }
+// $color-primary: #2196F3;
+// $color-second: #0277BD;
+// $color-accent: #2962FF;
+// $color-text: #263238;
+// $color-text2: #1D272C;
+// $color-bg: #FFF3E0;
+// $color-white: #FAFAFA;
 
 
 /* typography */
