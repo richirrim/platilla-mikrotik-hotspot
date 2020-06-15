@@ -23,14 +23,16 @@ html(lang="es")
       <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
       <link rel="icon" href="images/logo-white.png">
     
-  body
-    include /includes/main-header
+  body(class=`${currentPage.toLowerCase() === 'status' ? 'wrapper' : ''}`)
+    if (currentPage.toLowerCase() !== 'status')
+      include /includes/main-header
     
     // ----------- main -----------  
     main.main
       block main
-    
-    include /includes/main-footer
+
+    if (currentPage.toLowerCase() !== 'status')
+      include /includes/main-footer
     
     block scripts
       script(src="js/script.js")
