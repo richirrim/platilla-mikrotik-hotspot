@@ -8,9 +8,23 @@ body.wrapper main {
 }
 .container-table {
   margin: auto;
+  @include from(medium) { 
+    display: flex; 
+    justify-content: center;
+  }
   padding: 1em;
   flex-basis: 80%;
+  max-width: $max-width;
+  @include from(medium) {
+    .container {
+      padding-top: 2em;
+      padding-bottom: 2em;
+      flex-basis: 40%;
+    }
+  }
+  @include from(800px) { flex-basis: 50%; }
 }
+
 
 .status {
   border-bottom-left-radius: .5em;
@@ -18,9 +32,22 @@ body.wrapper main {
   margin-left: auto;
   margin-right: auto;
   padding: .7em 1.5em 1.5em;
+  @include from(medium) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: .5em;
+    border-bottom-left-radius: 0;
+    padding: 1em .5em;
+    margin-left: 0;
+    margin-right: 0;
+    height: 100%;
+  }
   letter-spacing: var(--letter-spacing);
   background-color: var(--color-text2);
   width: 90%;
+  @include from(medium) { width: 100%; }
   &__greet {
     color: var(--color-accent);
     margin-bottom: .25em;
@@ -43,9 +70,10 @@ body.wrapper main {
   text-align: center;
   overflow: hidden;
   width: 100%;
-  &__head {
-    background-color: var(--color-second);
-  }
+  @include from(medium) { flex-basis: 50%; }
+  @include from(800px) { flex-basis: 50%; }
+
+  &__head { background-color: var(--color-second); }
   &__body {}
   &__title { 
     color: var(--color-white);
@@ -55,7 +83,10 @@ body.wrapper main {
   &__row {
     &:nth-child(even) { background-color: rgba($color-bg, .1); }
   }
-  &__column { padding: var(--padding) 1em; }
+  &__column { 
+    padding: var(--padding) 1em; 
+    @include from(medium) { --padding: 1.5em; }
+  }
   &__column.time span {
     display: block;
     border-radius: .25em;
