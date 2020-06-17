@@ -1,0 +1,11 @@
+extends /config/template
+
+append config
+  -currentPage = 'Error'
+  -siteName = 'Error'
+  -metaDescription = `Página de error | Hotspot by ${siteName} 🧡`
+
+block main
+  div.error.center-content
+    span.error__text Hotspot ⚠ Error: <span>$(error)</span>
+    span.error__text Login page: <span>$(link-login)</span>

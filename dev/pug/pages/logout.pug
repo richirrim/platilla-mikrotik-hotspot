@@ -1,0 +1,35 @@
+extends /config/template
+
+append config
+  -currentPage = 'Logout'
+  -siteName = 'Logout'
+  -metaDescription = `Logout | Hotspot by ${siteName} 🧡`
+
+
+block main
+  div.container-table
+    table.table.b-shadow
+      thead.table__head
+        tr.table__row
+          th.table__title.strong Usuario / PIN
+          th.table__title Temporal
+      tbody.table__body
+        tr.table__row
+          td.table__column.strong Tú IP
+          td.table__column 192.168.2.322
+        tr.table__row
+          td.table__column Enviado
+          td.table__column 36 B
+        tr.table__row
+          td.table__column.strong Recibido
+          td.table__column 0 B
+        tr.table__row
+          td.table__column.strong Tiempo conectado
+          td.table__column 30 s
+        tr.table__row
+          td.table__column.strong Tiempo restante
+          td.table__column.time <span>15 min</span>
+    div.container
+      div.status.center-content.b-shadow
+        h1.status__greet Bienvenid@
+        p.status__status Estado: <span class="" style="color: #00e676;">activo</span>

@@ -23,15 +23,15 @@ html(lang="es")
       <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
       <link rel="icon" href="images/logo-white.png">
     
-  body(class=`${currentPage.toLowerCase() === 'status' ? 'wrapper' : ''}`)
-    if (currentPage.toLowerCase() !== 'status')
+  body(class=`${currentPage.toLowerCase() !== 'inicio' ? 'wrapper' : ''}`)
+    if (currentPage.toLowerCase() === 'inicio')
       include /includes/main-header
     
     // ----------- main -----------  
     main.main
       block main
 
-    if (currentPage.toLowerCase() !== 'status')
+    if (currentPage.toLowerCase() === 'inicio')
       include /includes/main-footer
     
     block scripts

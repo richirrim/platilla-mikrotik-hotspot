@@ -1,0 +1,11 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  opacity: .7;
+
+  &__text {
+    text-transform: uppercase;
+    &:first-child { margin-bottom: .5em; }
+  }
+}
