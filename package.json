@@ -1,5 +1,5 @@
 {
-  "name": "landing-page-mikrotik",
+  "name": " inouti-v1",
   "version": "1.0.0",
   "description": "Plantilla por defecto para negocios que usan Mikrotik",
   "main": "index.js",
@@ -8,8 +8,8 @@
     "build": "npm run build:css && npm run build:js"
   },
   "keywords": [],
-  "author": "INOUTI <inoutisoluciones@gmail.com>",
-  "license": "ISC",
+  "author": "INOUTI <inoutisolucionesti@gmail.com>",
+  "license": "EULA",
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
