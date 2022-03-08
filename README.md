@@ -28,6 +28,6 @@ Cada vez que se haga un cambio al proyecto en este repositorio, deberás bajarlo
 
 **Nota**: La terminal siempre debe apuntar a la ubicación del proyecto para ejecutar correctamente los comandos anteriores.
 
-![image preview](https://repository-images.githubusercontent.com/258600299/54d61a00-9912-11ea-9313-87a6b04cff94)
+![image preview](https://repository-images.githubusercontent.com/258600299/07d58e17-b40d-4074-94a3-f3fe9951d190)
 
 Enlace a la page: https://ejemploinouti.web.app/
